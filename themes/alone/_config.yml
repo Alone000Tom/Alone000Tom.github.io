@@ -1,0 +1,41 @@
+logo_title: Alone
+
+style: black
+
+favicon: /favicon.ico
+
+menu:
+  作品: /project
+  域名: /domain
+  友联: /links
+  关于: /about
+  Github: 
+
+# 做了域名限制，请改成自己的 KEY
+# 若关闭valine 设置enable为false
+livere:
+  on: true
+  livere_uid: MTAyMC81MzY3My8zMDE0Ng==
+
+
+highlight:
+  enable: false
+
+
+# Back to top in sidebar
+#b2t: true
+
+# Scroll percent label in b2t button
+#scrollpercent: true
+
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  #字数统计
+  wordcount: true
+  #预览时间
+  min2read: true
+  #总字数
+  totalcount: false
+  separated_meta: true
+
