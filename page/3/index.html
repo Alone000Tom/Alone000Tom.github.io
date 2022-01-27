@@ -182,35 +182,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/11/07/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-NewsCenter/" target="_self">
-          攻防世界-NewsCenter
+        <a href="/2021/11/07/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-unserialize3/" target="_self">
+          攻防世界-unserialize3
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/11/07/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-NewsCenter/" target="_self">
+        <a href="/2021/11/07/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-unserialize3/" target="_self">
           
           
             
           
-          环境http://111.200.241.244:62361
+          一.根据题目猜测这道题应该和反序列化漏洞有关1.先了解一下什么是序列化和反序列化当在php中创建了一个对象后，可以通过 serialize() 函数把这个对象转变成一个字符串，保存对象的值方便之后的传递与使用。与 serialize() 相反的就是反序列化函数 unserialize() ，它可以将一个字符串转变为相对应的php对象。
 
-打开发现为一搜索框，输入1,2,3没反应，了解到可能为xss或者sql注入。
-
-测试
-测试发现’闭合，输入-1’ union select 1,2,3#回显2,3.
-
-
-
-
-测试
-利用2,3回显点直接注入。database()先得到数据库名称。
-
-得到表名。得到列名得到列内内容
-
-
-sqlmap
-抓包获取请求包，保存为1.txt文件直
+在序列化过程中会用到的函数：    __construct(
         </a>
       </p>
 
