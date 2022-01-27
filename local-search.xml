@@ -142,11 +142,11 @@
   
   
   <entry>
-    <title>ctfhub-URL伪协议</title>
-    <link href="/2021/11/07/ctfhub-URL%E4%BC%AA%E5%8D%8F%E8%AE%AE/"/>
-    <url>/2021/11/07/ctfhub-URL%E4%BC%AA%E5%8D%8F%E8%AE%AE/</url>
+    <title>ctfhub-内网访问</title>
+    <link href="/2021/11/07/ctfhub-%E5%86%85%E7%BD%91%E8%AE%BF%E9%97%AE/"/>
+    <url>/2021/11/07/ctfhub-%E5%86%85%E7%BD%91%E8%AE%BF%E9%97%AE/</url>
     
-    <content type="html"><![CDATA[<p>URL伪协议：<br>file://  本地文件传输协议，File协议主要用于访问本地计算机中的文件，就如同在Windows资源管理器中打开文件一样<br>dict://  Dict协议,字典服务器器协议,dict是基于查询响应的TCP协议,它的目标是超越Webster protocol，并允许客户端在使用过程中访问更多字典。Dict服务器和客户机使用TCP端口2628<br>gopher://  Gopher协议是互联网上使用的分布型的文件搜集获取网络协议。gopher协议是在HTTP协议出现之前,在internet上常见重用的协议,但是现在已经用的很少了<br>sftp://  Sftp代表SSH文件传输协议（SSH File Transfer Protocol），或安全文件传输协议（Secure File Transfer Protocol），这是一种与SSH打包在一起的单独协议，它运行在安全连接上，并以类似的方式进行工作<br>ldap://  LDAP代表轻量级目录访问协议。它是IP网络上的一种用于管理和访问分布式目录信息服务的应用程序协议<br>tftp://  TFTP（Trivial File Transfer Protocol,简单文件传输协议）是一种简单的基于lockstep机制的文件传输协议，它允许客户端从远程主机获取文件或将文件上传至远程主机。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="打开题目"><a href="#打开题目" class="headerlink" title="打开题目"></a>打开题目</h1><p><img src="https://pic.imgdb.cn/item/61868d852ab3f51d9158221b.jpg"></p><blockquote><p>强调访问127.0.0.1/flag.php<br>打开环境地址为<a href="http://challenge-e7aed46229f00f03.sandbox.ctfhub.com:10800/?url=">http://challenge-e7aed46229f00f03.sandbox.ctfhub.com:10800/?url=</a>_<br>末尾存在url=猜测可能加上url=127.0.0.1/flag.php(去掉第一个_)</p></blockquote><h1 id="得到flag"><a href="#得到flag" class="headerlink" title="得到flag"></a>得到flag</h1><p><img src="https://pic.imgdb.cn/item/61868e6b2ab3f51d915975d7.jpg"></p>]]></content>
     
     
     <categories>
@@ -167,11 +167,11 @@
   
   
   <entry>
-    <title>ctfhub-内网访问</title>
-    <link href="/2021/11/07/ctfhub-%E5%86%85%E7%BD%91%E8%AE%BF%E9%97%AE/"/>
-    <url>/2021/11/07/ctfhub-%E5%86%85%E7%BD%91%E8%AE%BF%E9%97%AE/</url>
+    <title>ctfhub-URL伪协议</title>
+    <link href="/2021/11/07/ctfhub-URL%E4%BC%AA%E5%8D%8F%E8%AE%AE/"/>
+    <url>/2021/11/07/ctfhub-URL%E4%BC%AA%E5%8D%8F%E8%AE%AE/</url>
     
-    <content type="html"><![CDATA[<h1 id="打开题目"><a href="#打开题目" class="headerlink" title="打开题目"></a>打开题目</h1><p><img src="https://pic.imgdb.cn/item/61868d852ab3f51d9158221b.jpg"></p><blockquote><p>强调访问127.0.0.1/flag.php<br>打开环境地址为<a href="http://challenge-e7aed46229f00f03.sandbox.ctfhub.com:10800/?url=">http://challenge-e7aed46229f00f03.sandbox.ctfhub.com:10800/?url=</a>_<br>末尾存在url=猜测可能加上url=127.0.0.1/flag.php(去掉第一个_)</p></blockquote><h1 id="得到flag"><a href="#得到flag" class="headerlink" title="得到flag"></a>得到flag</h1><p><img src="https://pic.imgdb.cn/item/61868e6b2ab3f51d915975d7.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p>URL伪协议：<br>file://  本地文件传输协议，File协议主要用于访问本地计算机中的文件，就如同在Windows资源管理器中打开文件一样<br>dict://  Dict协议,字典服务器器协议,dict是基于查询响应的TCP协议,它的目标是超越Webster protocol，并允许客户端在使用过程中访问更多字典。Dict服务器和客户机使用TCP端口2628<br>gopher://  Gopher协议是互联网上使用的分布型的文件搜集获取网络协议。gopher协议是在HTTP协议出现之前,在internet上常见重用的协议,但是现在已经用的很少了<br>sftp://  Sftp代表SSH文件传输协议（SSH File Transfer Protocol），或安全文件传输协议（Secure File Transfer Protocol），这是一种与SSH打包在一起的单独协议，它运行在安全连接上，并以类似的方式进行工作<br>ldap://  LDAP代表轻量级目录访问协议。它是IP网络上的一种用于管理和访问分布式目录信息服务的应用程序协议<br>tftp://  TFTP（Trivial File Transfer Protocol,简单文件传输协议）是一种简单的基于lockstep机制的文件传输协议，它允许客户端从远程主机获取文件或将文件上传至远程主机。</p>]]></content>
     
     
     <categories>
