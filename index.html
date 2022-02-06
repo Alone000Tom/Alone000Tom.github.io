@@ -182,13 +182,68 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/01/25/RCE-%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5/" target="_self">
+        <a href="/posts/25545.html" target="_self">
+          RoarCTF 2019 Easy Calc
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/25545.html" target="_self">
+          
+          
+            
+          
+          这道题无任何想法，所以直接看wp。
+一、利用PHP的字符串解析特性Bypass在这道题中PHP解析时’num’=’ num’=’+num’，认为它们是同一个变量。但是waf只认’num’而’ num’和’+num’都不在范围内，这样就能绕过waf了。
+
+PHP需要将所有参数转换为有效的变量名，因此在解析查询字符串时，它会做两件事：1.删除空白符2.将某些字符转换为下划线（包括空格）所以
+
+payl
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-01-25 23:30" pubdate>
+              2022-01-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/BUU/">BUU</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/18485.html" target="_self">
           命令注入
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/01/25/RCE-%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5/" target="_self">
+        <a href="/posts/18485.html" target="_self">
           
           
             
@@ -233,13 +288,76 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/01/20/ctfhub-RCE%E8%BF%9C%E7%A8%8B%E5%8C%85%E5%90%AB/" target="_self">
+        <a href="/posts/11761.html" target="_self">
+          护网杯2018easy_tornado
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/11761.html" target="_self">
+          
+          
+            
+          
+          打开题目发现三个文件
+
+flag.txt文件内容
+
+显示flag在/fllllllllllllag文件中。
+
+
+
+welcom.txt文件内容
+
+hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md5加密。
+
+
+尝试访问访问/fllllllllllllag文件，发现错误提示。测试后发现还有一个error界面，格式为/error?msg=Error，怀
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-01-23 22:30" pubdate>
+              2022-01-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/BUU/">BUU</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/64920.html" target="_self">
           RCE-远程包含
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/01/20/ctfhub-RCE%E8%BF%9C%E7%A8%8B%E5%8C%85%E5%90%AB/" target="_self">
+        <a href="/posts/64920.html" target="_self">
           
           
             
@@ -319,13 +437,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/12/03/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHavefun/" target="_self">
+        <a href="/posts/51901.html" target="_self">
           极客大挑战 2019Havefun
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/12/03/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHavefun/" target="_self">
+        <a href="/posts/51901.html" target="_self">
           
           
             
@@ -363,94 +481,6 @@
               <a href="/tags/CTF/">CTF</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/12/03/%5BHCTF%202018%5DWarmUp/" target="_self">
-          HCTF 2018WarmUp
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/12/03/%5BHCTF%202018%5DWarmUp/" target="_self">
-          
-          
-            
-          
-          查看源码，发现source.php访问。得到代码如下
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778 &lt;?php    highlight_fil
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-03 13:01" pubdate>
-              2021-12-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/BUU/">BUU</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/11/23/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/11/23/hello-world/" target="_self">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-11-23 00:24" pubdate>
-              2021-11-23
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>
@@ -603,7 +633,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">7.6k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.7k</span>
 </div>
 </div>
 

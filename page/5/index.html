@@ -182,13 +182,155 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/09/08/%E5%A2%A8%E8%80%85%20X-Forwarded-For%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%AE%9E%E6%88%98/" target="_self">
+        <a href="/posts/37374.html" target="_self">
+          文件上传-%00绕过
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/37374.html" target="_self">
+          
+          
+            
+          
+          打开题目
+存在文件上传点。不能上传php,asp；只能上传png,jpg,gif文件。
+
+
+
+
+上传图片马
+上传图片之后，发现不知道图片位置。
+
+
+
+
+
+
+上传图片马代理抓包。
+
+发现在第一行地址处upload之后无路径；加上文件名称，%00截断修改包后发送。显示上传成功！
+
+
+蚁剑链接
+一开始复制浏览器地址加上upload/1.php（http://challenge-610973f02b095
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-09 20:01" pubdate>
+              2021-09-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CTFHUB/">CTFHUB</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/5117.html" target="_self">
+          文件上传-双写绕过
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/5117.html" target="_self">
+          
+          
+            
+          
+          打开题目
+文件上传 上传一个php一句话。
+
+发现上传之后后缀php被过滤。
+
+
+
+
+题目为双写绕过，写两次phpphp照样被过滤，写为pphphp过滤了中间一个php剩下字母拼成一个。
+
+上传成功，显示pass.php。
+
+
+工具链接
+输入文件地址 密码链接成功。
+
+找到flag文件成功找到！！
+
+
+
+考察文件上传漏洞，双写绕过，重复写后缀名，自动过滤一个还剩下一个保证文件格式完整。
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-08 20:01" pubdate>
+              2021-09-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CTFHUB/">CTFHUB</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/51326.html" target="_self">
           X-Forwarded-For注入漏洞实战
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/09/08/%E5%A2%A8%E8%80%85%20X-Forwarded-For%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%AE%9E%E6%88%98/" target="_self">
+        <a href="/posts/51326.html" target="_self">
           
           
             
@@ -247,13 +389,13 @@ python sqlmap.py -
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/31/%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/" target="_self">
+        <a href="/posts/25962.html" target="_self">
           域名申请
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/31/%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/" target="_self">
+        <a href="/posts/25962.html" target="_self">
           
           
             
@@ -298,13 +440,13 @@ python sqlmap.py -
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/08/04/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cbaby_web/" target="_self">
+        <a href="/posts/34587.html" target="_self">
           攻防世界baby_web
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/08/04/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cbaby_web/" target="_self">
+        <a href="/posts/34587.html" target="_self">
           
           
             
@@ -350,96 +492,6 @@ python sqlmap.py -
               <a href="/tags/CTF/">CTF</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/04/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Csimple_js/" target="_self">
-          
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/04/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Csimple_js/" target="_self">
-          
-          
-            
-          
-          
-title: 攻防世界simple_jsdate: 2021-08-04 19:30:10tags: CTFcategories: 攻防世界
-
-阅读
-发现提示的信息(Flag格式为 Cyberpeace{xxxxxxxxx} )
-
-
-打开题目
-题目提示密码一直不对 提示js 打开网页源码查看
-
-发现带有类似flag样式 一串内容
-
-
-解密
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-04 19:12" pubdate>
-              2021-08-04
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/08/03/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Ccommand-execution/" target="_self">
-          
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/03/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Ccommand-execution/" target="_self">
-          
-          
-            
-          
-          
-title: 攻防世界command_executiondate: 2021-08-03 22:30:10tags: CTFcategories: 攻防世界
-
-读题小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。应该是考察ping与waf相关内容
-WAF简介  Web应用防护系统（也称为：网站应用级入侵防御系统。英文：Web Application Firew
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-03 22:30" pubdate>
-              2021-08-03
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>
@@ -592,7 +644,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">7.6k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.7k</span>
 </div>
 </div>
 
