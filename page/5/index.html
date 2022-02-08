@@ -182,38 +182,22 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/37374.html" target="_self">
-          文件上传-%00绕过
+        <a href="/posts/11325.html" target="_self">
+          RCE-文件包含
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/37374.html" target="_self">
+        <a href="/posts/11325.html" target="_self">
           
           
             
           
-          打开题目
-存在文件上传点。不能上传php,asp；只能上传png,jpg,gif文件。
+          打开题目php代码没学过，但可以看出大概是file传入一个值是flag就显示Hacker!!!
+探索下面有一个shell点击看看。进入了shell.txt 看样子需要一个ctfhub参数。
 
 
-
-
-上传图片马
-上传图片之后，发现不知道图片位置。
-
-
-
-
-
-
-上传图片马代理抓包。
-
-发现在第一行地址处upload之后无路径；加上文件名称，%00截断修改包后发送。显示上传成功！
-
-
-蚁剑链接
-一开始复制浏览器地址加上upload/1.php（http://challenge-610973f02b095
+php函数system本文介绍了php函数system(),exec(),passthru()的区别与详细用法，有需要的朋友参考下。php提供了system(),exec(),passthru()这几个函数
         </a>
       </p>
 
@@ -221,8 +205,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-09 20:01" pubdate>
-              2021-09-09
+            <time datetime="2021-10-01 13:01" pubdate>
+              2021-10-01
             </time>
           </div>
         
@@ -252,40 +236,25 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/5117.html" target="_self">
-          文件上传-双写绕过
+        <a href="/posts/12889.html" target="_self">
+          文件头检查
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/5117.html" target="_self">
+        <a href="/posts/12889.html" target="_self">
           
           
             
           
-          打开题目
-文件上传 上传一个php一句话。
+          题目打开是一个文件上传。
+测试上传.php文件显示只能上传.jpg  .png   .gif类型文件。上传.jpg   .png    .jif文件显示文件错误。也不知道错在哪我c连正常jpg都不能上传？？？
+更不用说上传图片马了 都显示文件错误。
 
-发现上传之后后缀php被过滤。
+上传图片抓包加入一句话不行，上传在制作的图片马不行，上传.cer也不行…..
 
-
-
-
-题目为双写绕过，写两次phpphp照样被过滤，写为pphphp过滤了中间一个php剩下字母拼成一个。
-
-上传成功，显示pass.php。
-
-
-工具链接
-输入文件地址 密码链接成功。
-
-找到flag文件成功找到！！
-
-
-
-考察文件上传漏洞，双写绕过，重复写后缀名，自动过滤一个还剩下一个保证文件格式完整。
-
-
+这个问题把我搞得懵懵逼（*゜Д゜）σ凸←自爆按钮 
+搜索wp多数为上
         </a>
       </p>
 
@@ -293,8 +262,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-08 20:01" pubdate>
-              2021-09-08
+            <time datetime="2021-09-28 20:01" pubdate>
+              2021-09-28
             </time>
           </div>
         
@@ -302,7 +271,7 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CTFHUB/">CTFHUB</a>
+              <a href="/categories/ctfhub/">ctfhub</a>
             
           </div>
         
@@ -324,33 +293,33 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/51326.html" target="_self">
-          X-Forwarded-For注入漏洞实战
+        <a href="/posts/1046.html" target="_self">
+          misc-stegano
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/51326.html" target="_self">
+        <a href="/posts/1046.html" target="_self">
           
           
             
           
-          打开地址
-是一个登录页面
+          题目
+题目描述显示为PDF格式，提交格式flag{xxx}，解密需要小写。
+
+下载附件
 
 
+打开PDF
+打开PDF发现为英文文章，首先进行翻译。
+
+翻译结果是一堆人名。无情——
 
 
-代理抓包
-题目为X-Forwarded-For：存在注入漏洞，抓包结果没有X-Forwarded-For：添加X-Forwarded-For之后，复制保存在sqlmap下txt文件。X-Forwarded-For: * (加 * 告诉sqlmap此处存在漏洞)
+解决
+经过一系列操作无果，最终查找wp发现提供思路是复制内容到notpad++。复制粘贴后发现确实多了两行A、B组成的内容。
 
-保存名字为xff.txt文件之后。
-
-
-sqlmap
-爆数据库
-
-python sqlmap.py -
+根据提示显示将A替换成-，将B替换成.(尝试了A换为.B换为-)。直接复制解码发现解密失败
         </a>
       </p>
 
@@ -358,122 +327,8 @@ python sqlmap.py -
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-08 20:00" pubdate>
-              2021-09-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/mozhe/">mozhe</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/25962.html" target="_self">
-          域名申请
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/25962.html" target="_self">
-          
-          
-            
-          
-          阿里云申请域名   nosecurity.cn域名申请成功 
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-31 22:20" pubdate>
-              2021-08-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/34587.html" target="_self">
-          攻防世界baby_web
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/34587.html" target="_self">
-          
-          
-            
-          
-          读题
-提示初始页面   我们一般认为初始页面为index.php
-
-
-
-出入index.php发现又跳转到1.php
-
-
-使用bp抓包，输入index.php看返回结果
-
-找到一个flag字样
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-04 20:09" pubdate>
-              2021-08-04
+            <time datetime="2021-09-28 20:01" pubdate>
+              2021-09-28
             </time>
           </div>
         
@@ -497,11 +352,119 @@ python sqlmap.py -
     </article>
   </div>
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/35732.html" target="_self">
+          view_source
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/35732.html" target="_self">
+          
+          
+            
+          
+          打开题目 题目描述x老师让小宁同学查看一个网页的源代码，但小宁同学发现鼠标右键好像不管用。
+打开题目发现，鼠标右键不能使用。由于题目提示查看网页源代码，使用f12查看网页源码。
+在网页源代码中发现flag！
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-24 20:01" pubdate>
+              2021-09-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/19553.html" target="_self">
+          文件上传--.htaccess
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/19553.html" target="_self">
+          
+          
+            
+          
+          htaccess文件(或者”分布式配置文件”）,全称是Hypertext Access(超文本入口)。提供了针对目录改变配置的方法，即，在一个特定的文档目录中放置一个包含一个或多个指令的文件， 以作用于此目录及其所有子目录。作为用户，所能使用的命令受到限制。管理员可以通过Apache的AllowOverride指令来设置。
+打开环境
+
+
+创建.htaccess文件
+写入文本  SetHandler
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-20 19:01" pubdate>
+              2021-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CTFHUB/">CTFHUB</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -644,7 +607,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.7k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">10.3k</span>
 </div>
 </div>
 

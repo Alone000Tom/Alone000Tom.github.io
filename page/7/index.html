@@ -182,24 +182,28 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/18232.html" target="_self">
-          web信息泄露（php）
+        <a href="/posts/34587.html" target="_self">
+          攻防世界baby_web
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/18232.html" target="_self">
+        <a href="/posts/34587.html" target="_self">
           
           
             
           
-          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; php
- 开启环境后，点击进入，查看图片，仔细搜索发现flag。
+          读题
+提示初始页面   我们一般认为初始页面为index.php
 
 
 
+出入index.php发现又跳转到1.php
 
- 按f12 查看网页源码 ，搜索发现flag。
+
+使用bp抓包，输入index.php看返回结果
+
+找到一个flag字样
 
 
 
@@ -210,11 +214,18 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-06 01:20" pubdate>
-              2021-07-06
+            <time datetime="2021-08-04 20:09" pubdate>
+              2021-08-04
             </time>
           </div>
         
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+            
+          </div>
         
         
           <div class="post-meta">
@@ -234,18 +245,29 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/6726.html" target="_self">
-          web信息泄露（目录遍历）
+        <a href="/posts/12446.html" target="_self">
+          攻防世界simple_js
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/6726.html" target="_self">
+        <a href="/posts/12446.html" target="_self">
           
           
             
           
-          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  目录遍历路径遍历攻击（也称为目录遍历）旨在访问存储在Web根文件夹之外的文件和目录。通过操纵带有“点-斜线（…）”序列及其变化的文件或使用绝对文件路径来引用文件的变量，可以访问存储在文件系统上的任意文件和目录，包括应用程序源代码、配置和关键系统文件。需要注意的是，系统操作访问控制（如在微软Windo
+          阅读
+发现提示的信息(Flag格式为 Cyberpeace{xxxxxxxxx} )
+
+
+打开题目
+题目提示密码一直不对 提示js 打开网页源码查看
+
+发现带有类似flag样式 一串内容
+
+
+解密
+
         </a>
       </p>
 
@@ -253,11 +275,18 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-06 01:20" pubdate>
-              2021-07-06
+            <time datetime="2021-08-04 19:30" pubdate>
+              2021-08-04
             </time>
           </div>
         
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+            
+          </div>
         
         
           <div class="post-meta">
@@ -277,18 +306,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/28636.html" target="_self">
-          First blog
+        <a href="/posts/34849.html" target="_self">
+          攻防世界command_execution
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/28636.html" target="_self">
+        <a href="/posts/34849.html" target="_self">
           
           
             
           
-          &emsp; &emsp; &emsp; &emsp; &emsp;  初识 刚开始了解hexo+github搭建个人博客，于是从网上搜索视频，按着视频教程一步一步开始下载nodejs、git等环境配置文件，hexo配置一直无法安装完成。多方向搜索了解之后，认为镜像问题，更换了淘宝镜像，还是无法安装插件。多次删除nodejs、git等从新开始尝试，从零做起，按着视频教程操作，最后还是hexo安装失
+          读题小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。应该是考察ping与waf相关内容
+WAF简介  Web应用防护系统（也称为：网站应用级入侵防御系统。英文：Web Application Firewall，简称：WAF）。利用国际上公认的一种说法：Web应用防火墙是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品。 
+WA
         </a>
       </p>
 
@@ -296,8 +327,123 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-05 22:35" pubdate>
-              2021-07-05
+            <time datetime="2021-08-03 22:30" pubdate>
+              2021-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/15111.html" target="_self">
+          攻防世界weakauth
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/15111.html" target="_self">
+          
+          
+            
+          
+          打开题目一个登录页面 随手设的密码
+打开环境发现是一个登录页面 说是随便设置的密码 简单猜一下(不行再爆破)试了试password  不行哈试了试123456 woc成功了
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-02 17:20" pubdate>
+              2021-08-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/64137.html" target="_self">
+          攻防世界 webshell
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/64137.html" target="_self">
+          
+          
+            
+          
+          题目
+小宁把一段话放在index.php里面
+
+打开场景连接
+提示你会使用 webshell吗 搜索了解webshell为网站后门
+
+并且给了一段php代码 搜索了解为php一句话  因此推断小宁在index.php中插入了一句话后门
+
+
+菜刀
+使用菜刀 输入地址 密码为shell成功查看目录结构及其内容打开flag文件 成功得到
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-08-02 15:54" pubdate>
+              2021-08-02
             </time>
           </div>
         
@@ -306,7 +452,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/HELLO/">HELLO</a>
+              <a href="/tags/CTF/">CTF</a>
             
           </div>
         
@@ -318,7 +464,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span>
+      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -461,7 +607,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.7k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">10.3k</span>
 </div>
 </div>
 

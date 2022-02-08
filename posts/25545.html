@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      877 字
+      932 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12
+      13
        分钟
     </span>
   
@@ -298,20 +298,70 @@
 </tbody></table>
 <h1 id="四、解题"><a href="#四、解题" class="headerlink" title="四、解题"></a>四、解题</h1><p>打开题目发现是一个计算器页面。</p>
 <blockquote>
-<p><img src="https://pic.imgdb.cn/item/61ff7cab2ab3f51d91989ab2.jpg" srcset="/img/loading2.gif" lazyload></p>
+<p><img src="https://pic.imgdb.cn/item/61ff7cab2ab3f51d91989ab2.jpg" srcset="/img/loading2.gif" lazyload alt="＜(▰˘◡˘▰)"></p>
 </blockquote>
 <p>没有任何提示，右键查看源码。</p>
 <blockquote>
-<p><img src="https://pic.imgdb.cn/item/61ff7d552ab3f51d91995605.jpg" srcset="/img/loading2.gif" lazyload></p>
+<p><img src="https://pic.imgdb.cn/item/61ff7d552ab3f51d91995605.jpg" srcset="/img/loading2.gif" lazyload alt="＜(▰˘◡˘▰)"></p>
 </blockquote>
 <p>访问calc.php发现存在过滤。</p>
 <blockquote>
-<p><img src="https://pic.imgdb.cn/item/61ff7dda2ab3f51d9199f77b.jpg" srcset="/img/loading2.gif" lazyload></p>
+<p><img src="https://pic.imgdb.cn/item/61ff7dda2ab3f51d9199f77b.jpg" srcset="/img/loading2.gif" lazyload alt="＜(▰˘◡˘▰)"></p>
 </blockquote>
-<p>了解一下php的解析规则，当php进行解析的时候，如果变量前面有空格，会去掉前面的空格再解析,而这里黑名单过滤，没有过滤这种情况，那么久可以构造一个查询语句了<br><code>? num=1;var_dump(scandir(chr(47)))</code><br>scandir(/)可以查看目录,用chr()来绕过waf,注意在calc.php页面提交<br>提交后得到结果：<br>发现存在f1agg文件</p>
+<p>了解一下php的解析规则，当php进行解析的时候，如果变量前面有空格，会去掉前面的空格再解析,而这里黑名单过滤，没有过滤这种情况，那么久可以构造一个查询语句了<br><code>? num=1;var_dump(scandir(chr(47)))</code><br><strong>ASCII码47对应/</strong><br>scandir(/)可以查看目录,用chr()来绕过waf,注意在calc.php页面提交<br>提交后得到结果：<br>发现存在f1agg文件</p>
 <blockquote>
-<p><img src="https://pic.imgdb.cn/item/61ff7fe32ab3f51d919c50c7.jpg" srcset="/img/loading2.gif" lazyload></p>
+<p><img src="https://pic.imgdb.cn/item/61ff7fe32ab3f51d919c50c7.jpg" srcset="/img/loading2.gif" lazyload alt="＜(▰˘◡˘▰)"></p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">字母</th>
+<th align="left">ASCII</th>
+<th align="left">构造chr()</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">/</td>
+<td align="left">47</td>
+<td align="left">chr(47)</td>
+</tr>
+<tr>
+<td align="left">f</td>
+<td align="left">102</td>
+<td align="left">chr(102)</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">49</td>
+<td align="left">chr(49)</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">97</td>
+<td align="left">chr(97)</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">103</td>
+<td align="left">chr(103)</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">103</td>
+<td align="left">chr(103)</td>
+</tr>
+<tr>
+<td align="left">构造结果：</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>? num=1;var_dump(file_get_contents(chr(47).chr(102).chr(49).chr(97).chr(103).chr(103)))</code></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/61ff960b2ab3f51d91b396e0.jpg" srcset="/img/loading2.gif" lazyload alt="＜(▰˘◡˘▰)"></p>
 
             </div>
             <hr>
@@ -345,6 +395,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/posts/17782.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hexo的SEO优化-使用abbrlink设置永久链接为随机值</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
@@ -539,7 +595,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.7k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">10.3k</span>
 </div>
 </div>
 

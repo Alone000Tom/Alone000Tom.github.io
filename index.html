@@ -182,23 +182,20 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/25545.html" target="_self">
-          RoarCTF 2019 Easy Calc
+        <a href="/posts/4019.html" target="_self">
+          Alice与Bob
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/25545.html" target="_self">
+        <a href="/posts/4019.html" target="_self">
           
           
             
           
-          这道题无任何想法，所以直接看wp。
-一、利用PHP的字符串解析特性Bypass在这道题中PHP解析时’num’=’ num’=’+num’，认为它们是同一个变量。但是waf只认’num’而’ num’和’+num’都不在范围内，这样就能绕过waf了。
+          题目下面是一个大整数:98554799767,请分解为两个素数，分解后，小的放前面，大的放后面，合成一个新的数字，进行md5的32位小写哈希，提交答案。
+素数拆分一个素数拆分网站得到拆分结果：小的：101999大的：966233小的在前，大的在后。101999966233进行MD5加密。MD5加密平台得到结果：flag{d450209323a847c8d01c6be47c81811a}
 
-PHP需要将所有参数转换为有效的变量名，因此在解析查询字符串时，它会做两件事：1.删除空白符2.将某些字符转换为下划线（包括空格）所以
-
-payl
         </a>
       </p>
 
@@ -206,8 +203,113 @@ payl
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-25 23:30" pubdate>
-              2022-01-25
+            <time datetime="2022-01-27 23:30" pubdate>
+              2022-01-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/BUU/">BUU</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF-crypto/">CTF-crypto</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/27424.html" target="_self">
+          Rabbit
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/27424.html" target="_self">
+          
+          
+            
+          
+          AES、DES、RC4、Rabbit、TripleDes加解密网站http://tool.chinaz.com/Tools/TextEncrypt.aspx
+
+
+Rabbit密文格式：U2FsdGVkX1/+ydnDPowGbjjJXhZxm2MP2AgI解密结果：Cute_Rabbit
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-01-27 23:30" pubdate>
+              2022-01-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/BUU/">BUU</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF-crypto/">CTF-crypto</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/24484.html" target="_self">
+          极客大挑战 2019BuyFlag
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/24484.html" target="_self">
+          
+          
+            
+          
+          打开题目显示需要折磨多钱才可以购买。下面还有两个条件，一个是需要student身份，另一个是需要正确密码。页面也没有密码输入框啊····查看网页源代码,发现有密码验证。抓包查看。这有一个coockie默认值user=0改为user=1试试。在这里user的值是一种判别方式。发现修改之后，就是学生身份，差一个密码，应该是在下面加上password。
+让我们post过去一个money和一个passwo
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-01-27 23:30" pubdate>
+              2022-01-27
             </time>
           </div>
         
@@ -237,19 +339,19 @@ payl
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/18485.html" target="_self">
-          命令注入
+        <a href="/posts/14699.html" target="_self">
+          信息化时代的步伐
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/18485.html" target="_self">
+        <a href="/posts/14699.html" target="_self">
           
           
             
           
-          RCE 的知识点：　　RCE英文全称：remote command/code execute（远程命令/代码执行漏洞）；
-　　RCE分为远程命令执行ping和远程代码执行evel。　　漏洞出现的原因：没有在输入口做输入处理。　　我们常见的路由器、防火墙、入侵检测等设备的web管理界面上。　　一般会给用户提供一个ping操作的web界面，用户从web界面输入目标IP，提交后，后台会对该IP地址进行一
+          题目606046152623600817831216121621196386一串字码啥说明也没有很懵逼啊。
+搜啊看wp发现是中文电码。中文电码，又称标准中文电码、中文商用电码、中文电报码或中文电报明码，原本是于电报之中传送中文信息的方法。它是第一个把汉字化作电子讯号的编码表。中国人最早研制的电报机华侨商人王承荣从法国回国后，与福州的王斌研制出我国第一台电报机，并呈请政府自办电报。清政府拒不采纳。这
         </a>
       </p>
 
@@ -257,71 +359,8 @@ payl
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-25 19:01" pubdate>
-              2022-01-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/11761.html" target="_self">
-          护网杯2018easy_tornado
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/11761.html" target="_self">
-          
-          
-            
-          
-          打开题目发现三个文件
-
-flag.txt文件内容
-
-显示flag在/fllllllllllllag文件中。
-
-
-
-welcom.txt文件内容
-
-hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md5加密。
-
-
-尝试访问访问/fllllllllllllag文件，发现错误提示。测试后发现还有一个error界面，格式为/error?msg=Error，怀
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-23 22:30" pubdate>
-              2022-01-23
+            <time datetime="2022-01-27 23:30" pubdate>
+              2022-01-27
             </time>
           </div>
         
@@ -337,7 +376,7 @@ hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CTF/">CTF</a>
+              <a href="/tags/CTF-crypto/">CTF-crypto</a>
             
           </div>
         
@@ -351,54 +390,51 @@ hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/64920.html" target="_self">
-          RCE-远程包含
+        <a href="/posts/2881.html" target="_self">
+          变异凯撒
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/64920.html" target="_self">
+        <a href="/posts/2881.html" target="_self">
           
           
             
           
-          打开题目
+          常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。加密密文：afZ_r9VYfScOeO_UL^RWUc格式：flag{ }做以下尝试    afZ_ -&gt; flag    rc -&gt; {}
 
-查看内容
-
-“我没有shell，你怎么取flag？”打开便是一个phpinfo()
-
-
-尝试file
-用file包含phpinfo是有回显的?/file=php://input
-
-
-
-所以构造payload ：?file=php://input查看当前目录结果如下：
+其中ASCII码值的变化为
 
 
 
 
 
-
-查看上级目录
-
+差值
 
 
 
+a
+f
+5
 
 
-查看flag内容
+f
+l
+6
 
 
+Z
+a
+7
 
 
+_
+g
+8
 
 
-
-直接搜索、查看
-
-?file=php://inpu
+所以解密方法已经很明显了~
+12345678c =
         </a>
       </p>
 
@@ -406,63 +442,8 @@ hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-20 19:01" pubdate>
-              2022-01-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CTFHUB/">CTFHUB</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/51901.html" target="_self">
-          极客大挑战 2019Havefun
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/51901.html" target="_self">
-          
-          
-            
-          
-          
-
-打开环境页面有一只猫，尾巴会动，啥也没有。f12查看网页。发现提醒，传入参数cat如果cat值为dog则显示一些东西。传参数发现直接得到结果
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-12-03 23:01" pubdate>
-              2021-12-03
+            <time datetime="2022-01-27 23:30" pubdate>
+              2022-01-27
             </time>
           </div>
         
@@ -478,7 +459,7 @@ hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CTF/">CTF</a>
+              <a href="/tags/CTF-crypto/">CTF-crypto</a>
             
           </div>
         
@@ -490,7 +471,7 @@ hints.txt文件内容filename进行md5加密前面加上cookie_secret再进行md
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -633,7 +614,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.7k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">10.3k</span>
 </div>
 </div>
 

@@ -4,11 +4,161 @@
   
   
   <entry>
+    <title>Alice与Bob</title>
+    <link href="/posts/4019.html"/>
+    <url>/posts/4019.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>下面是一个大整数:98554799767,请分解为两个素数，分解后，小的放前面，大的放后面，合成一个新的数字，进行md5的32位小写哈希，提交答案。</p><h1 id="素数拆分"><a href="#素数拆分" class="headerlink" title="素数拆分"></a>素数拆分</h1><p><a href="http://www.factordb.com/index.php">一个素数拆分网站</a><br>得到拆分结果：<br><img src="https://pic.imgdb.cn/item/6202634c2ab3f51d9131a988.jpg"><br>小的：101999<br>大的：966233<br>小的在前，大的在后。101999966233进行MD5加密。<br><a href="https://www.cmd5.com/hash.aspx?s=123456">MD5加密平台</a><br>得到结果：<br><img src="https://pic.imgdb.cn/item/620264fd2ab3f51d9133470e.jpg"><br>flag{d450209323a847c8d01c6be47c81811a}</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>BUU</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF-crypto</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Rabbit</title>
+    <link href="/posts/27424.html"/>
+    <url>/posts/27424.html</url>
+    
+    <content type="html"><![CDATA[<p>AES、DES、RC4、Rabbit、TripleDes加解密网站<br><a href="http://tool.chinaz.com/Tools/TextEncrypt.aspx">http://tool.chinaz.com/Tools/TextEncrypt.aspx</a></p><hr><p><img src="https://pic.imgdb.cn/item/620003262ab3f51d91248a3a.jpg"></p><p>Rabbit密文格式：<br>U2FsdGVkX1/+ydnDPowGbjjJXhZxm2MP2AgI<br>解密结果：<br>Cute_Rabbit</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>BUU</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF-crypto</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>极客大挑战 2019BuyFlag</title>
+    <link href="/posts/24484.html"/>
+    <url>/posts/24484.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="打开题目"><a href="#打开题目" class="headerlink" title="打开题目"></a>打开题目</h1><p><img src="https://pic.imgdb.cn/item/61ffe7052ab3f51d9101d055.jpg"><br>显示需要折磨多钱才可以购买。下面还有两个条件，一个是需要student身份，另一个是需要正确密码。<br><img src="https://pic.imgdb.cn/item/61ffe7572ab3f51d9102339f.jpg"><br>页面也没有密码输入框啊····<br>查看网页源代码,发现有密码验证。<br><img src="https://pic.imgdb.cn/item/61ffe87d2ab3f51d91038e85.jpg"><br>抓包查看。<br><img src="https://pic.imgdb.cn/item/61ffea042ab3f51d9105486c.jpg"><br>这有一个coockie默认值user=0改为user=1试试。<br>在这里user的值是一种判别方式。<br><img src="https://pic.imgdb.cn/item/61ffea4b2ab3f51d9105a847.jpg"><br>发现修改之后，就是学生身份，差一个密码，应该是在下面加上password。<br><img src="https://pic.imgdb.cn/item/61fff0222ab3f51d910cf23d.jpg"></p><p>让我们post过去一个money和一个password，password要等于404，并且password不能为数字，那好办我们可以用弱类型，使用字母绕过is_num，即让password=404a。<br><img src="https://pic.imgdb.cn/item/61fff4212ab3f51d91124068.jpg"><br>直接输入钱数会显示过长。<br><img src="https://pic.imgdb.cn/item/61fff4602ab3f51d911293f9.jpg"><br>说数字太长了，那我们我们就可以用科学计数法：<br>采用科学计数法1e10，表示1乘以10的十次方。<br><img src="https://pic.imgdb.cn/item/61fff4bd2ab3f51d91131173.jpg"></p><hr><p>当然也可以这样，既然说了长度太长，合理猜测一下用的是strcmp比较长度，那么直接money[]=1就可以了。<br>password=404%00直接截断,money定义为数组形式money[]=1<br><img src="https://pic.imgdb.cn/item/61fff5622ab3f51d9113ecc4.jpg"></p><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p>flag{4c7ea2c3-bd25-427b-86dc-8a87af7ac62d} </p><h1 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;password&#x27;</span>])) &#123;<br><span class="hljs-variable">$password</span> = <span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;password&#x27;</span>];<br><span class="hljs-keyword">if</span> (is_numeric(<span class="hljs-variable">$password</span>)) &#123;<br><span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;password can&#x27;t be number&lt;/br&gt;&quot;</span>;<br>&#125;<span class="hljs-keyword">elseif</span> (<span class="hljs-variable">$password</span> == <span class="hljs-number">404</span>) &#123;<br><span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;Password Right!&lt;/br&gt;&quot;</span>;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>首先它判断你是不是数字，如果是，就错误，如果不是数字再判断你是不是等于404，如果等于404，则密码正确。很显然，这里的考点就是is_numeric这个函数，那么我们来看看这个函数有什么特别。</p><h2 id="PHP-is-numeric-函数"><a href="#PHP-is-numeric-函数" class="headerlink" title="PHP is_numeric() 函数"></a>PHP is_numeric() 函数</h2><p>is_numeric() 函数用于检测变量是否为数字或数字字符串。<br>语法:<br>bool is_numeric ( mixed $var )<br>$var：要检测的变量。</p><p>返回值:<br>　　如果指定的变量是数字和数字字符串则返回 TRUE，否则返回 FALSE。<br>is_numeric函数对于空字符%00，无论是%00放在前后都可以判断为非数值，而%20空格字符只能放在数值后。所以，查看函数发现该函数对对于第一个空格字符会跳过空格字符判断，接着后面的判断！<br>那知道这个就好说了，我们直接404%20，就可以同时过第一个判断和第二个判断。</p><h2 id="PHP-strcmp-函数"><a href="#PHP-strcmp-函数" class="headerlink" title="PHP strcmp() 函数"></a>PHP strcmp() 函数</h2><p><img src="https://pic.imgdb.cn/item/61fff7b62ab3f51d9116f9dd.jpg"><br>要求的是传入两个字符串，那如果我们传入一个非字符串会出现什么结果呢？当我们传入一个非字符串的时候，函数会报错，但同时会返回结果0，也就是说虽然报错，但返回的结果0意味着相等，那么如何可以传入一个非字符串呢？用数组。<br>传入数组(非法字符),得到结果为0，与相等时结果一样，从而判定为钱数一样多。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>BUU</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>信息化时代的步伐</title>
+    <link href="/posts/14699.html"/>
+    <url>/posts/14699.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.imgdb.cn/item/620277312ab3f51d9145f95d.jpg"><br>606046152623600817831216121621196386<br>一串字码啥说明也没有很懵逼啊。</p><h1 id="搜啊"><a href="#搜啊" class="headerlink" title="搜啊"></a>搜啊</h1><p>看wp发现是中文电码。<br>中文电码，又称标准中文电码、中文商用电码、中文电报码或中文电报明码，原本是于电报之中传送中文信息的方法。它是第一个把汉字化作电子讯号的编码表。<br>中国人最早研制的电报机华侨商人王承荣从法国回国后，与福州的王斌研制出我国第一台电报机，并呈请政府自办电报。清政府拒不采纳。<br>这算跟题目扯上关系了。</p><hr><p><a href="http://code.mcdvisa.com/">中文电码查询网站</a></p><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/6202785b2ab3f51d91475d69.jpg"></p><p><strong>整活，不赖！</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>BUU</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF-crypto</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>变异凯撒</title>
+    <link href="/posts/2881.html"/>
+    <url>/posts/2881.html</url>
+    
+    <content type="html"><![CDATA[<p>常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。<br>加密密文：afZ_r9VYfScOeO_UL^RWUc<br>格式：flag{ }<br>做以下尝试<br>    afZ_ -&gt; flag<br>    rc -&gt; {}</p><hr><p>其中ASCII码值的变化为</p><table><thead><tr><th align="left"></th><th align="left"></th><th align="left"><strong>差值</strong></th></tr></thead><tbody><tr><td align="left">a</td><td align="left">f</td><td align="left">5</td></tr><tr><td align="left">f</td><td align="left">l</td><td align="left">6</td></tr><tr><td align="left">Z</td><td align="left">a</td><td align="left">7</td></tr><tr><td align="left">_</td><td align="left">g</td><td align="left">8</td></tr></tbody></table><p>所以解密方法已经很明显了~</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">c</span> = <span class="hljs-string">&quot;afZ_r9VYfScOeO_UL^RWUc&quot;</span><br><span class="hljs-variable">move</span> = <span class="hljs-number">5</span><br><span class="hljs-variable">flag</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-variable">for</span> <span class="hljs-variable">i</span> <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-variable">c</span>:<br>    <span class="hljs-variable">flag</span> += <span class="hljs-function"><span class="hljs-title">chr</span>(<span class="hljs-title"><span class="hljs-built_in">ord</span></span>(<span class="hljs-variable">i</span>) + <span class="hljs-variable">move</span>)</span><br>    <span class="hljs-variable">move</span> += <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">flag</span>)</span><br><br></code></pre></td></tr></table></figure><p>结果为flag{Caesar_variation}</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>BUU</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF-crypto</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo的SEO优化-使用abbrlink设置永久链接为随机值</title>
+    <link href="/posts/17782.html"/>
+    <url>/posts/17782.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="安装使用-abbrlink"><a href="#安装使用-abbrlink" class="headerlink" title="安装使用 abbrlink"></a>安装使用 abbrlink</h1><h2 id="将插件添加到-Hexo"><a href="#将插件添加到-Hexo" class="headerlink" title="将插件添加到 Hexo"></a>将插件添加到 Hexo</h2><p>博客根目录下执行 npm 安装指令<br><code>$ npm install hexo-abbrlink --save</code></p><h1 id="启用-abbrlink"><a href="#启用-abbrlink" class="headerlink" title="启用 abbrlink"></a>启用 abbrlink</h1><p>以下设置均修改<strong>博客根目录</strong>下的配置文件**.config.xml**<br>注意：修改博客根目录配置文件，不是主题配置文件。</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vim"># URL<br>## If your site <span class="hljs-keyword">is</span> <span class="hljs-keyword">put</span> in <span class="hljs-keyword">a</span> subdirectory, <span class="hljs-keyword">set</span> url <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;http://yoursite.com/child&#x27;</span> <span class="hljs-built_in">and</span> root <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;/child/&#x27;</span><br>ur<span class="hljs-variable">l:</span>  http<span class="hljs-variable">s:</span>//wwww.<span class="hljs-keyword">com</span>/       #替换为你自己的链接<br>roo<span class="hljs-variable">t:</span> /<br>permalink: posts/:abbrlink/    #这里就是永久链接的参数设置<br>permalink_default<span class="hljs-variable">s:</span><br></code></pre></td></tr></table></figure><p>当永久链接参数为permalink: posts/:abbrlink/时，生成的文章链接类似于/post/cd6eb56d/,例如<a href="https://xxxx.com/post/cd6eb56d/">https://xxxx.com/post/cd6eb56d/</a><br>当永久链接参数为permalink: posts/:abbrlink.html时，生成的文章链接类似于/post/cd6eb56d.html,例如<a href="https://xxxx.com/post/cd6eb56d.html">https://xxxx.com/post/cd6eb56d.html</a></p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># abbrlink config</span><br><span class="hljs-symbol">abbrlink:</span><br><span class="hljs-symbol">  alg:</span> crc32  <span class="hljs-meta">#support crc16(default) and crc32</span><br><span class="hljs-symbol">  rep:</span> hex    <span class="hljs-meta">#support dec(default) and hex</span><br></code></pre></td></tr></table></figure><h3 id="abbrlink-参数说明"><a href="#abbrlink-参数说明" class="headerlink" title="abbrlink 参数说明"></a>abbrlink 参数说明</h3><p>参数：alg 对应随机值算法参数，可选为 crc16 和 crc32<br>参数：rep 对应生成链接的表示方法，hex：十六进制，dec:十进制<br>参数为permalink: posts/:abbrlink/时(后加.html就是加上.html)<br>两种参数的生成区别：<br>crc16+hex:<br><code>/posts/66c8/</code></p><p>crc16+dec:<br><code> /posts/65535/</code></p><p>crc32+hex:<br><code>/posts/8ddf18fb/</code></p><p>crc32+dec:<br><code>/posts/1690090958/ </code><br>对于 crc16 算法生成的随机值，具有一个最大限度，为 65536。</p><p>使用前执行<br>$ hexo clean<br>先清除<br> &amp; hexo g</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SEO优化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>RoarCTF 2019 Easy Calc</title>
     <link href="/posts/25545.html"/>
     <url>/posts/25545.html</url>
     
-    <content type="html"><![CDATA[<p>这道题无任何想法，所以直接看wp。</p><h1 id="一、利用PHP的字符串解析特性Bypass"><a href="#一、利用PHP的字符串解析特性Bypass" class="headerlink" title="一、利用PHP的字符串解析特性Bypass"></a>一、利用PHP的字符串解析特性Bypass</h1><p>在这道题中PHP解析时’num’=’ num’=’+num’，认为它们是同一个变量。<br>但是waf只认’num’而’ num’和’+num’都不在范围内，这样就能绕过waf了。</p><blockquote><p>PHP需要将所有参数转换为有效的变量名，因此在解析查询字符串时，它会做两件事：<br>1.删除空白符<br>2.将某些字符转换为下划线（包括空格）<br>所以</p></blockquote><h3 id="payload1"><a href="#payload1" class="headerlink" title="payload1:"></a>payload1:</h3><p>scandir(“/“)函数读取目录，/被过滤所以换为chr(47)绕过。</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">? num=<span class="hljs-number">1</span>;var<span class="hljs-constructor">_dump(<span class="hljs-params">scandir</span>(<span class="hljs-params">chr</span>(47)</span>))<br></code></pre></td></tr></table></figure><p>file()函数读取flag。</p><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gml">? num=<span class="hljs-number">1</span>;var_dump(file(<span class="hljs-built_in">chr</span>(<span class="hljs-number">47</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">102</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">49</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">97</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>)))<br></code></pre></td></tr></table></figure><h3 id="payload2："><a href="#payload2：" class="headerlink" title="payload2："></a>payload2：</h3><p>空格换为+。</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">?+num=<span class="hljs-number">1</span>;var<span class="hljs-constructor">_dump(<span class="hljs-params">scandir</span>(<span class="hljs-params">chr</span>(47)</span>))<br></code></pre></td></tr></table></figure><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gml">?+num=<span class="hljs-number">1</span>;var_dump(file(<span class="hljs-built_in">chr</span>(<span class="hljs-number">47</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">102</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">49</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">97</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>)))<br></code></pre></td></tr></table></figure><p>补充：这里的chr(47)也可以换为hex2bin(dechex(47))<br>dechex()函数把十进制数转换为十六进制数。hex2bin()函数把十六进制值的字符串转换为 ASCII字符。</p><h1 id="二、http走私绕过WAF"><a href="#二、http走私绕过WAF" class="headerlink" title="二、http走私绕过WAF"></a>二、http走私绕过WAF</h1><blockquote><p>一般来说，反向代理服务器与后端的源站服务器之间，会重用TCP链接。这也很容易理解，用户的分布范围是十分广泛，建立连接的时间也是不确定的，这样TCP链接就很难重用，而代理服务器与后端的源站服务器的IP地址是相对固定，不同用户的请求通过代理服务器与源站服务器建立链接，这两者之间的TCP链接进行重用，也就顺理成章了。<br>当我们向代理服务器发送一个比较模糊的HTTP请求时，由于两者服务器的实现方式不同，可能代理服务器认为这是一个HTTP请求，然后将其转发给了后端的源站服务器，但源站服务器经过解析处理后，只认为其中的一部分为正常请求，剩下的那一部分，就算是走私的请求，当该部分对正常用户的请求造成了影响之后，就实现了HTTP走私攻击。<br>因为两个cl直接导致前端转发的服务器400，而且完整转发了post包给后端.<br><strong>看有这种方法，但没找到此方法解题步骤。</strong></p></blockquote><h1 id="三、补充"><a href="#三、补充" class="headerlink" title="三、补充"></a>三、补充</h1><table><thead><tr><th align="left">1.</th><th align="center">var_dump()</th><th align="left">函数用于输出变量的相关信息。</th></tr></thead><tbody><tr><td align="left">2.</td><td align="center">var_dump()</td><td align="left">函数显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构。PHP 版本要求: PHP 4, PHP 5, PHP 7</td></tr></tbody></table><p><code>void var_dump ( mixed $expression [, mixed $... ] )</code></p><table><thead><tr><th align="left">3.</th><th align="center">scandir()</th><th align="left">函数返回指定目录中的文件和目录的数组。</th></tr></thead><tbody><tr><td align="left">4.</td><td align="center">file_get_contents()</td><td align="left">函数把整个文件读入一个字符串中。</td></tr><tr><td align="left">5.</td><td align="center">chr()函数</td><td align="left">从不同的 ASCII 值返回字符：</td></tr><tr><td align="left">6.</td><td align="center">php语法中.就是相加。</td><td align="left"></td></tr></tbody></table><h1 id="四、解题"><a href="#四、解题" class="headerlink" title="四、解题"></a>四、解题</h1><p>打开题目发现是一个计算器页面。</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7cab2ab3f51d91989ab2.jpg"></p></blockquote><p>没有任何提示，右键查看源码。</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7d552ab3f51d91995605.jpg"></p></blockquote><p>访问calc.php发现存在过滤。</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7dda2ab3f51d9199f77b.jpg"></p></blockquote><p>了解一下php的解析规则，当php进行解析的时候，如果变量前面有空格，会去掉前面的空格再解析,而这里黑名单过滤，没有过滤这种情况，那么久可以构造一个查询语句了<br><code>? num=1;var_dump(scandir(chr(47)))</code><br>scandir(/)可以查看目录,用chr()来绕过waf,注意在calc.php页面提交<br>提交后得到结果：<br>发现存在f1agg文件</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7fe32ab3f51d919c50c7.jpg"></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>这道题无任何想法，所以直接看wp。</p><h1 id="一、利用PHP的字符串解析特性Bypass"><a href="#一、利用PHP的字符串解析特性Bypass" class="headerlink" title="一、利用PHP的字符串解析特性Bypass"></a>一、利用PHP的字符串解析特性Bypass</h1><p>在这道题中PHP解析时’num’=’ num’=’+num’，认为它们是同一个变量。<br>但是waf只认’num’而’ num’和’+num’都不在范围内，这样就能绕过waf了。</p><blockquote><p>PHP需要将所有参数转换为有效的变量名，因此在解析查询字符串时，它会做两件事：<br>1.删除空白符<br>2.将某些字符转换为下划线（包括空格）<br>所以</p></blockquote><h3 id="payload1"><a href="#payload1" class="headerlink" title="payload1:"></a>payload1:</h3><p>scandir(“/“)函数读取目录，/被过滤所以换为chr(47)绕过。</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">? num=<span class="hljs-number">1</span>;var<span class="hljs-constructor">_dump(<span class="hljs-params">scandir</span>(<span class="hljs-params">chr</span>(47)</span>))<br></code></pre></td></tr></table></figure><p>file()函数读取flag。</p><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gml">? num=<span class="hljs-number">1</span>;var_dump(file(<span class="hljs-built_in">chr</span>(<span class="hljs-number">47</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">102</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">49</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">97</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>)))<br></code></pre></td></tr></table></figure><h3 id="payload2："><a href="#payload2：" class="headerlink" title="payload2："></a>payload2：</h3><p>空格换为+。</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">?+num=<span class="hljs-number">1</span>;var<span class="hljs-constructor">_dump(<span class="hljs-params">scandir</span>(<span class="hljs-params">chr</span>(47)</span>))<br></code></pre></td></tr></table></figure><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gml">?+num=<span class="hljs-number">1</span>;var_dump(file(<span class="hljs-built_in">chr</span>(<span class="hljs-number">47</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">102</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">49</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">97</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>).<span class="hljs-built_in">chr</span>(<span class="hljs-number">103</span>)))<br></code></pre></td></tr></table></figure><p>补充：这里的chr(47)也可以换为hex2bin(dechex(47))<br>dechex()函数把十进制数转换为十六进制数。hex2bin()函数把十六进制值的字符串转换为 ASCII字符。</p><h1 id="二、http走私绕过WAF"><a href="#二、http走私绕过WAF" class="headerlink" title="二、http走私绕过WAF"></a>二、http走私绕过WAF</h1><blockquote><p>一般来说，反向代理服务器与后端的源站服务器之间，会重用TCP链接。这也很容易理解，用户的分布范围是十分广泛，建立连接的时间也是不确定的，这样TCP链接就很难重用，而代理服务器与后端的源站服务器的IP地址是相对固定，不同用户的请求通过代理服务器与源站服务器建立链接，这两者之间的TCP链接进行重用，也就顺理成章了。<br>当我们向代理服务器发送一个比较模糊的HTTP请求时，由于两者服务器的实现方式不同，可能代理服务器认为这是一个HTTP请求，然后将其转发给了后端的源站服务器，但源站服务器经过解析处理后，只认为其中的一部分为正常请求，剩下的那一部分，就算是走私的请求，当该部分对正常用户的请求造成了影响之后，就实现了HTTP走私攻击。<br>因为两个cl直接导致前端转发的服务器400，而且完整转发了post包给后端.<br><strong>看有这种方法，但没找到此方法解题步骤。</strong></p></blockquote><h1 id="三、补充"><a href="#三、补充" class="headerlink" title="三、补充"></a>三、补充</h1><table><thead><tr><th align="left">1.</th><th align="center">var_dump()</th><th align="left">函数用于输出变量的相关信息。</th></tr></thead><tbody><tr><td align="left">2.</td><td align="center">var_dump()</td><td align="left">函数显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构。PHP 版本要求: PHP 4, PHP 5, PHP 7</td></tr></tbody></table><p><code>void var_dump ( mixed $expression [, mixed $... ] )</code></p><table><thead><tr><th align="left">3.</th><th align="center">scandir()</th><th align="left">函数返回指定目录中的文件和目录的数组。</th></tr></thead><tbody><tr><td align="left">4.</td><td align="center">file_get_contents()</td><td align="left">函数把整个文件读入一个字符串中。</td></tr><tr><td align="left">5.</td><td align="center">chr()函数</td><td align="left">从不同的 ASCII 值返回字符：</td></tr><tr><td align="left">6.</td><td align="center">php语法中.就是相加。</td><td align="left"></td></tr></tbody></table><h1 id="四、解题"><a href="#四、解题" class="headerlink" title="四、解题"></a>四、解题</h1><p>打开题目发现是一个计算器页面。</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7cab2ab3f51d91989ab2.jpg" alt="＜(▰˘◡˘▰)"></p></blockquote><p>没有任何提示，右键查看源码。</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7d552ab3f51d91995605.jpg" alt="＜(▰˘◡˘▰)"></p></blockquote><p>访问calc.php发现存在过滤。</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7dda2ab3f51d9199f77b.jpg" alt="＜(▰˘◡˘▰)"></p></blockquote><p>了解一下php的解析规则，当php进行解析的时候，如果变量前面有空格，会去掉前面的空格再解析,而这里黑名单过滤，没有过滤这种情况，那么久可以构造一个查询语句了<br><code>? num=1;var_dump(scandir(chr(47)))</code><br><strong>ASCII码47对应/</strong><br>scandir(/)可以查看目录,用chr()来绕过waf,注意在calc.php页面提交<br>提交后得到结果：<br>发现存在f1agg文件</p><blockquote><p><img src="https://pic.imgdb.cn/item/61ff7fe32ab3f51d919c50c7.jpg" alt="＜(▰˘◡˘▰)"></p></blockquote><table><thead><tr><th align="left">字母</th><th align="left">ASCII</th><th align="left">构造chr()</th></tr></thead><tbody><tr><td align="left">/</td><td align="left">47</td><td align="left">chr(47)</td></tr><tr><td align="left">f</td><td align="left">102</td><td align="left">chr(102)</td></tr><tr><td align="left">1</td><td align="left">49</td><td align="left">chr(49)</td></tr><tr><td align="left">a</td><td align="left">97</td><td align="left">chr(97)</td></tr><tr><td align="left">g</td><td align="left">103</td><td align="left">chr(103)</td></tr><tr><td align="left">g</td><td align="left">103</td><td align="left">chr(103)</td></tr><tr><td align="left">构造结果：</td><td align="left"></td><td align="left"></td></tr><tr><td align="left"><code>? num=1;var_dump(file_get_contents(chr(47).chr(102).chr(49).chr(97).chr(103).chr(103)))</code></td><td align="left"></td><td align="left"></td></tr></tbody></table><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/61ff960b2ab3f51d91b396e0.jpg" alt="＜(▰˘◡˘▰)"></p>]]></content>
     
     
     <categories>
