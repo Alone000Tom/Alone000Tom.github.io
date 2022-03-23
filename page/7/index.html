@@ -18,7 +18,7 @@
   <meta name="author" content="Alone">
   <meta name="keywords" content="">
   
-  <title>Alone 的博客</title>
+  <title>nosecurity</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -142,7 +142,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/shouye1.png') no-repeat center center;
+         style="background: url('/img/panor.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -182,31 +182,21 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/34587.html" target="_self">
-          攻防世界baby_web
+        <a href="/posts/17040.html" target="_self">
+          Daovoice
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/34587.html" target="_self">
+        <a href="/posts/17040.html" target="_self">
           
           
             
           
-          读题
-提示初始页面   我们一般认为初始页面为index.php
-
-
-
-出入index.php发现又跳转到1.php
-
-
-使用bp抓包，输入index.php看返回结果
-
-找到一个flag字样
-
-
-
+          关于DaoVoiceDaoVoice 是一款革命性的应用运营平台，致力于帮助企业实现以用户为中心的「精益运营」体系。
+融合「在线聊天」、「客服支持」、「用户画像」、「消息推送」、「行为引导」等功能为一体， 按需获取用户信息和行为，实现场景化消息推送，让通知更富有人情味。
+接入只需 5 行代码，即可创建与用户实时沟通的窗口，无缝接入企业原有产品体系，拉近企业与用户的距离。
+秉承「数据驱动，精益运营」
         </a>
       </p>
 
@@ -214,8 +204,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-04 20:09" pubdate>
-              2021-08-04
+            <time datetime="2021-09-13 12:20" pubdate>
+              2021-09-13
             </time>
           </div>
         
@@ -223,7 +213,77 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+              <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/37374.html" target="_self">
+          文件上传-%00绕过
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/37374.html" target="_self">
+          
+          
+            
+          
+          打开题目
+存在文件上传点。不能上传php,asp；只能上传png,jpg,gif文件。
+
+
+
+
+上传图片马
+上传图片之后，发现不知道图片位置。
+
+
+
+
+
+
+上传图片马代理抓包。
+
+发现在第一行地址处upload之后无路径；加上文件名称，%00截断修改包后发送。显示上传成功！
+
+
+蚁剑链接
+一开始复制浏览器地址加上upload/1.php（http://challenge-610973f02b095
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-09 20:01" pubdate>
+              2021-09-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CTFHUB/">CTFHUB</a>
             
           </div>
         
@@ -245,28 +305,39 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/12446.html" target="_self">
-          攻防世界simple_js
+        <a href="/posts/5117.html" target="_self">
+          文件上传-双写绕过
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/12446.html" target="_self">
+        <a href="/posts/5117.html" target="_self">
           
           
             
           
-          阅读
-发现提示的信息(Flag格式为 Cyberpeace{xxxxxxxxx} )
+          打开题目
+文件上传 上传一个php一句话。
+
+发现上传之后后缀php被过滤。
 
 
-打开题目
-题目提示密码一直不对 提示js 打开网页源码查看
-
-发现带有类似flag样式 一串内容
 
 
-解密
+题目为双写绕过，写两次phpphp照样被过滤，写为pphphp过滤了中间一个php剩下字母拼成一个。
+
+上传成功，显示pass.php。
+
+
+工具链接
+输入文件地址 密码链接成功。
+
+找到flag文件成功找到！！
+
+
+
+考察文件上传漏洞，双写绕过，重复写后缀名，自动过滤一个还剩下一个保证文件格式完整。
+
 
         </a>
       </p>
@@ -275,8 +346,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-04 19:30" pubdate>
-              2021-08-04
+            <time datetime="2021-09-08 20:01" pubdate>
+              2021-09-08
             </time>
           </div>
         
@@ -284,7 +355,7 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+              <a href="/categories/CTFHUB/">CTFHUB</a>
             
           </div>
         
@@ -306,20 +377,33 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/34849.html" target="_self">
-          攻防世界command_execution
+        <a href="/posts/51326.html" target="_self">
+          X-Forwarded-For注入漏洞实战
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/34849.html" target="_self">
+        <a href="/posts/51326.html" target="_self">
           
           
             
           
-          读题小宁写了个ping功能,但没有写waf,X老师告诉她这是非常危险的，你知道为什么吗。应该是考察ping与waf相关内容
-WAF简介  Web应用防护系统（也称为：网站应用级入侵防御系统。英文：Web Application Firewall，简称：WAF）。利用国际上公认的一种说法：Web应用防火墙是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品。 
-WA
+          打开地址
+是一个登录页面
+
+
+
+
+代理抓包
+题目为X-Forwarded-For：存在注入漏洞，抓包结果没有X-Forwarded-For：添加X-Forwarded-For之后，复制保存在sqlmap下txt文件。X-Forwarded-For: * (加 * 告诉sqlmap此处存在漏洞)
+
+保存名字为xff.txt文件之后。
+
+
+sqlmap
+爆数据库
+
+python sqlmap.py -
         </a>
       </p>
 
@@ -327,8 +411,8 @@ WA
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-03 22:30" pubdate>
-              2021-08-03
+            <time datetime="2021-09-08 20:00" pubdate>
+              2021-09-08
             </time>
           </div>
         
@@ -336,7 +420,7 @@ WA
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+              <a href="/categories/mozhe/">mozhe</a>
             
           </div>
         
@@ -358,20 +442,18 @@ WA
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/15111.html" target="_self">
-          攻防世界weakauth
+        <a href="/posts/25962.html" target="_self">
+          域名申请
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/15111.html" target="_self">
+        <a href="/posts/25962.html" target="_self">
           
           
             
           
-          打开题目一个登录页面 随手设的密码
-打开环境发现是一个登录页面 说是随便设置的密码 简单猜一下(不行再爆破)试了试password  不行哈试了试123456 woc成功了
-
+          阿里云申请域名   nosecurity.cn域名申请成功 
 
         </a>
       </p>
@@ -380,8 +462,8 @@ WA
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-02 17:20" pubdate>
-              2021-08-02
+            <time datetime="2021-08-31 22:20" pubdate>
+              2021-08-31
             </time>
           </div>
         
@@ -389,7 +471,7 @@ WA
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
+              <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
             
           </div>
         
@@ -397,62 +479,7 @@ WA
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/64137.html" target="_self">
-          攻防世界 webshell
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/64137.html" target="_self">
-          
-          
-            
-          
-          题目
-小宁把一段话放在index.php里面
-
-打开场景连接
-提示你会使用 webshell吗 搜索了解webshell为网站后门
-
-并且给了一段php代码 搜索了解为php一句话  因此推断小宁在index.php中插入了一句话后门
-
-
-菜刀
-使用菜刀 输入地址 密码为shell成功查看目录结构及其内容打开flag文件 成功得到
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-08-02 15:54" pubdate>
-              2021-08-02
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
+              <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
             
           </div>
         
@@ -464,7 +491,7 @@ WA
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/6/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><a class="extend next" rel="next" href="/page/8/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -607,7 +634,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">10.3k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12k</span>
 </div>
 </div>
 

@@ -4,6 +4,131 @@
   
   
   <entry>
+    <title>input的type属性大总结</title>
+    <link href="/posts/227.html"/>
+    <url>/posts/227.html</url>
+    
+    <content type="html"><![CDATA[<center>type类型</center><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>•文本类型 (type=”text”)<br>•密码类型 (type=”password”)   <strong>输入后显示为</strong><br>•搜索类型 (type=”search”)<br>•数字类型 (type=”number”)<br>•复选框类型 (type=”checkbox”)   <strong>可以多选</strong><br>•单选框类型 (type=”radio”)      <strong>只能单选</strong><br>•邮箱类型 (type=”email”)<br>•电话类型 (type=”tel”)<br>•网址类型 (type=”url”)<br>•本地时间和日期类型 (type=”datetime-local”)<br>•日期（年-月-日）类型 (type=”date”)<br>•日期（月份）类型 (type=”month”‘)<br>•日期（星期）炎型 (type=”week”)<br>•日期（时间）类型 (type=”time”)<br>•图像类型 (type=”image”)<br>•文件类型 (type=”file”)<br>•范围类型 (type=”range”)<br>•颜色类型 (type=”color”)<br>•按钮类型 (type=”button”)<br>•按钮类型 (type=”submit”)   <strong>提交</strong><br>•按钮类型 (type=”reset”)    <strong>重置</strong><br>•隐藏类型 (type=”hidden”)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HTML5新语义元素</title>
+    <link href="/posts/510.html"/>
+    <url>/posts/510.html</url>
+    
+    <content type="html"><![CDATA[<p><strong>HTML5提供的新语义元素定义了网页的不同部分：</strong><br>•header -＞定义简介形式的内容<br>•nav-＞定义页面主导航功能<br>•main -＞定义主内容，主内容中可以有各种子内容区段（比如article、section、div等）<br>•article-＞定义独立的文章内容，与页面其它部分无关（比如一篇博文）<br>•section -＞定义文档中的节，与article类似，但section更适用于组织页面使其按功能分块<br>•aside-＞定义侧边栏（术语条目、作者简介、相关链接等）<br>•footer-＞定义页脚部分的内容<br>•details-＞ 定义额外的细节<br>•summary-＞定义details元素的标题</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ciphey</title>
+    <link href="/posts/13348.html"/>
+    <url>/posts/13348.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><code>python3 -m pip install ciphey --upgrade</code><br>或<br><code>pip install ciphey --upgrade</code></p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>windows下如果出现这个编码问题：‘’gbk’ codec can’t decode byte 0xbf in position 695’<br>解决方法就是找到pywhat这个包的位置，一般是在你的python安装目录下：….\python3\Lib\site-packages\pywhat<br>  根据错误修改代码，主要是在读取文件的时候发生错误，将”r” 改为”rb”,即可。<br>然后这个目录下找到：regex_identifier.py这个文件，把 <strong>init</strong>()函数内的with open(fullpath,”r”) 改为with open(fullpath,”rb”) 即可<br><img src="https://pic.imgdb.cn/item/621498b12ab3f51d91cd00fb.jpg"></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>ciphey 使用演示 </p><p>ciphey -t “<em>密文</em>“<br>ciphey -f 文件名 </p><p>ciphey -t “I44EOOLCIFUDQ5KLME======”<br><img src="https://pic.imgdb.cn/item/6214999a2ab3f51d91cf2962.jpg"><br>运行，会自动运算，如果不是想要的结果可以输入 n，继续运算，直至正确结果</p><h1 id="ciphey命令参数"><a href="#ciphey命令参数" class="headerlink" title="ciphey命令参数"></a>ciphey命令参数</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">ciphey <span class="hljs-comment">--help</span><br>用法: ciphey [选项] [TEXT_STDIN]<br><br>  Ciphey - 自动解密工具<br><br>  文档地址: <span class="hljs-keyword">https</span>://github.com/Ciphey/Ciphey/wiki<br><br>  Discord (这里支持，我们大部分时间都在线):<br>  <span class="hljs-keyword">https</span>://discord.ciphey.online/<br><br>  GitHub: <span class="hljs-keyword">https</span>://github.com/ciphey/ciphey<br><br> cipher是一种使用智能人工智能的自动解密工具<br>和自然语言处理。输入加密文本，获取解密文本<br><br><br>例如:<br>    基本用法: ciphey -t <span class="hljs-string">&quot;aGVsbG8gbXkgbmFtZSBpcyBiZWU=&quot;</span><br><br>选项:<br>  -t, <span class="hljs-comment">--text TEXT            您想要解密的密文。</span><br>  -q, <span class="hljs-comment">--quiet                减少冗长的显示,直接给结果</span><br>  -g, <span class="hljs-comment">--greppable            只输出答案(对于grep很有用)</span><br>  -v, <span class="hljs-comment">--verbose</span><br>  -C, <span class="hljs-comment">--checker TEXT         使用给定的检查器</span><br>  -c, <span class="hljs-comment">--config TEXT          使用给定的配置文件。默认为</span><br>                             appdirs.user_config_dir(<span class="hljs-string">&#x27;ciphey&#x27;</span>,<br>                             <span class="hljs-string">&#x27;ciphey&#x27;</span>)/<span class="hljs-string">&#x27;config.yml&#x27;</span><br><br>  -w, <span class="hljs-comment">--wordlist TEXT        使用给定的密码字典</span><br>  -p, <span class="hljs-comment">--param TEXT           将参数传递给语言检查器</span><br>  -l, <span class="hljs-comment">--list-params BOOLEAN  列出所选模块的参数</span><br>  <span class="hljs-comment">--searcher TEXT            选择要使用的搜索算法</span><br>  -b, <span class="hljs-comment">--bytes                强制密码使用二进制模式作为输入</span><br>  <span class="hljs-comment">--default-dist TEXT        设置默认的字符/字节分布</span><br>  -m, <span class="hljs-comment">--module PATH          从给定路径添加模块</span><br>  -A, <span class="hljs-comment">--appdirs              输出密码到想要的文件位置</span><br><br>  -f, <span class="hljs-comment">--file FILENAME</span><br>  <span class="hljs-comment">--help                     显示此帮助消息并退出。</span><br></code></pre></td></tr></table></figure><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="支持解密列表"><a href="#支持解密列表" class="headerlink" title="支持解密列表"></a>支持解密列表</h2><blockquote><p>支持破解的密码列表<br>基本加密</p></blockquote><p>*Caesar Cipher-凯撒密码<br>*ROT47（使用 ROT47 字母高达 ROT94）<br>*ASCII 移位（高达 ROT127，带有完整的 ASCII 字母表）<br>*Vigenère Cipher-维吉尼亚密码<br>*Affine Cipher-仿射密码<br>*Binary Substitution Cipher-二进制替换密码 (XY-Cipher)<br>*Baconian Cipher -培根密码（两种变体）<br>*Soundex<br>*Transposition Cipher-转置密码<br>*Pig Latin-猪拉丁语</p><h2 id="现代密码学"><a href="#现代密码学" class="headerlink" title="现代密码学"></a>现代密码学</h2><p>*Repeating-key XOR-重复键异或<br>*Single XOR-单异或</p><h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>*Base2（二进制）<br>*Base8（八进制）<br>*Base10（十进制）<br>*Base16（十六进制）<br>*Base32<br>*Base58 比特币<br>*Base58 Flickr（发布候选阶段）<br>*Base58 Ripple<br>*Base62<br>*Base64<br>*Base64 URL（发布候选阶段）<br>*Base69<br>*Base85<br>*Z85（发布候选阶段）<br>*ASCII Base85<br>*Base91<br>*Base65536（发布候选阶段）<br>*ASCII<br>*Reversed text-反转文字<br>*Morse Code-摩尔斯电码<br>*DNA codons-DNA 密码子（释放候选阶段）<br>*Atbash<br>*Standard Galactic Alphabet-标准银河字母表（又名 Minecraft Enchanting Language）<br>*Leetspeak<br>*Baudot ITA2<br>*URL encoding-网址编码<br>*SMS Multi-tap<br>*DMTF（发布候选阶段）<br>*A1Z26（发布候选阶段）<br>*Prisoner’s Tap Code-囚犯的窃听代码<br>*UUencode<br>*Braille-盲文（1 级）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>正则表达式大全</title>
+    <link href="/posts/51373.html"/>
+    <url>/posts/51373.html</url>
+    
+    <content type="html"><![CDATA[<center> 正则表达式大大大大大全</center>TIPS ONE：可以使用 Ctrl-F 快捷键搜索关键字TIPS TWO：下面所列的正则表达式均自己测试过，但并非终极严谨……如果你有更好的替代方案，欢迎提出哦^_^<h1 id="邮箱-邮件地址（Email）"><a href="#邮箱-邮件地址（Email）" class="headerlink" title="邮箱/邮件地址（Email）"></a>邮箱/邮件地址（Email）</h1><p><code>\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]&#123;2,14&#125;</code></p><h1 id="手机（国内）"><a href="#手机（国内）" class="headerlink" title="手机（国内）"></a>手机（国内）</h1><p><code>0?(13|14|15|17|18|19)[0-9]&#123;9&#125;</code></p><h1 id="电话（国内）"><a href="#电话（国内）" class="headerlink" title="电话（国内）"></a>电话（国内）</h1><p><code>(\(\d&#123;3,4&#125;\)|\d&#123;3,4&#125;-|\s)?\d&#123;8&#125; </code></p><h1 id="网址（URL）"><a href="#网址（URL）" class="headerlink" title="网址（URL）"></a>网址（URL）</h1><p><code>^((https|http)?:\/\/)[^\s]+</code></p><h1 id="邮政编码"><a href="#邮政编码" class="headerlink" title="邮政编码"></a>邮政编码</h1><p><code> ^[1-9]\d&#123;5&#125;$</code></p><h1 id="身份证号码（18-位）"><a href="#身份证号码（18-位）" class="headerlink" title="身份证号码（18 位）"></a>身份证号码（18 位）</h1><p><code>^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d&#123;3&#125;)([0-9]|X)$</code></p><h1 id="QQ-号码"><a href="#QQ-号码" class="headerlink" title="QQ 号码"></a>QQ 号码</h1><p><code>[1-9][0-9]&#123;4,&#125;</code></p><h1 id="IP-地址（IPv4）"><a href="#IP-地址（IPv4）" class="headerlink" title="IP 地址（IPv4）"></a>IP 地址（IPv4）</h1><p><code>(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d) </code></p><h1 id="日期（yyyy-mm-dd）"><a href="#日期（yyyy-mm-dd）" class="headerlink" title="日期（yyyy-mm-dd）"></a>日期（yyyy-mm-dd）</h1><p><code>([0-9]&#123;3&#125;[1-9]|[0-9]&#123;2&#125;[1-9][0-9]&#123;1&#125;|[0-9]&#123;1&#125;[1-9][0-9]&#123;2&#125;|[1-9][0-9]&#123;3&#125;)-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))</code></p><h1 id="时间（hh-mm-ss）"><a href="#时间（hh-mm-ss）" class="headerlink" title="时间（hh:mm:ss）"></a>时间（hh:mm:ss）</h1><p><code>([01]?\d|2[0-3]):[0-5]?\d:[0-5]?\d</code></p><h1 id="空白行"><a href="#空白行" class="headerlink" title="空白行"></a>空白行</h1><p><code>\n\s*\r </code></p><h1 id="中文字符"><a href="#中文字符" class="headerlink" title="中文字符"></a>中文字符</h1><p><code>[\u4e00-\u9fa5]</code></p><h1 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h1><p><code>^-?[1-9]\d*$ </code></p><h1 id="正整数"><a href="#正整数" class="headerlink" title="正整数"></a>正整数</h1><p><code>^[1-9]\d*$</code></p><h1 id="非负整数（0-和正整数）"><a href="#非负整数（0-和正整数）" class="headerlink" title="非负整数（0 和正整数）"></a>非负整数（0 和正整数）</h1><p><code>^(0|[1-9][0-9]*)$</code></p><h1 id="负整数"><a href="#负整数" class="headerlink" title="负整数"></a>负整数</h1><p><code>^-[1-9]\d*$</code></p><h1 id="非正整数（0-和负整数）"><a href="#非正整数（0-和负整数）" class="headerlink" title="非正整数（0 和负整数）"></a>非正整数（0 和负整数）</h1><p><code>^-[1-9]\d|0$</code></p><h1 id="十进制整数"><a href="#十进制整数" class="headerlink" title="十进制整数"></a>十进制整数</h1><p><code>^[0-9]*$</code></p><h1 id="n-位的整数"><a href="#n-位的整数" class="headerlink" title="n 位的整数"></a>n 位的整数</h1><p><code>^\d&#123;n&#125;$</code></p><h1 id="至少-n-位的整数"><a href="#至少-n-位的整数" class="headerlink" title="至少 n 位的整数"></a>至少 n 位的整数</h1><p><code>^\d&#123;n,&#125;$</code></p><h1 id="m-n位的整数"><a href="#m-n位的整数" class="headerlink" title="m~n位的整数"></a>m~n位的整数</h1><p><code>^\d&#123;m,n&#125;$</code></p><h1 id="正浮点数"><a href="#正浮点数" class="headerlink" title="正浮点数"></a>正浮点数</h1><p><code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$</code></p><h1 id="负浮点数"><a href="#负浮点数" class="headerlink" title="负浮点数"></a>负浮点数</h1><p><code>^-[1-9]\d*\.\d*|-0\.\d*[1-9]\d*$</code></p><h1 id="包含两位小数的实数"><a href="#包含两位小数的实数" class="headerlink" title="包含两位小数的实数"></a>包含两位小数的实数</h1><p><code>^-?[0-9]+(.[0-9]&#123;2&#125;)?$</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文件读取空格绕过</title>
+    <link href="/posts/4923.html"/>
+    <url>/posts/4923.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="文件读取空格绕过"><a href="#文件读取空格绕过" class="headerlink" title="文件读取空格绕过"></a>文件读取空格绕过</h1><ul><li>${IFS}</li><li>$IFS$9</li><li>&lt;</li><li>&lt;&gt;</li><li>{,}</li></ul><h1 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">cat</span> flag.txt<br><span class="hljs-built_in">cat</span><span class="hljs-variable">$</span>&#123;IFS&#125;flag.txt<br><span class="hljs-built_in">cat</span><span class="hljs-variable">$IFS</span><span class="hljs-variable">$9flag</span>.txt<br><span class="hljs-built_in">cat</span>&lt;flag.txt<br><span class="hljs-built_in">cat</span>&lt;&gt;flag.txt<br>&#123;<span class="hljs-built_in">cat</span>,flag.txt&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Alice与Bob</title>
     <link href="/posts/4019.html"/>
     <url>/posts/4019.html</url>
@@ -109,6 +234,31 @@
     <url>/posts/2881.html</url>
     
     <content type="html"><![CDATA[<p>常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。<br>加密密文：afZ_r9VYfScOeO_UL^RWUc<br>格式：flag{ }<br>做以下尝试<br>    afZ_ -&gt; flag<br>    rc -&gt; {}</p><hr><p>其中ASCII码值的变化为</p><table><thead><tr><th align="left"></th><th align="left"></th><th align="left"><strong>差值</strong></th></tr></thead><tbody><tr><td align="left">a</td><td align="left">f</td><td align="left">5</td></tr><tr><td align="left">f</td><td align="left">l</td><td align="left">6</td></tr><tr><td align="left">Z</td><td align="left">a</td><td align="left">7</td></tr><tr><td align="left">_</td><td align="left">g</td><td align="left">8</td></tr></tbody></table><p>所以解密方法已经很明显了~</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">c</span> = <span class="hljs-string">&quot;afZ_r9VYfScOeO_UL^RWUc&quot;</span><br><span class="hljs-variable">move</span> = <span class="hljs-number">5</span><br><span class="hljs-variable">flag</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-variable">for</span> <span class="hljs-variable">i</span> <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-variable">c</span>:<br>    <span class="hljs-variable">flag</span> += <span class="hljs-function"><span class="hljs-title">chr</span>(<span class="hljs-title"><span class="hljs-built_in">ord</span></span>(<span class="hljs-variable">i</span>) + <span class="hljs-variable">move</span>)</span><br>    <span class="hljs-variable">move</span> += <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">flag</span>)</span><br><br></code></pre></td></tr></table></figure><p>结果为flag{Caesar_variation}</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>BUU</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF-crypto</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>萌萌哒的八戒</title>
+    <link href="/posts/46767.html"/>
+    <url>/posts/46767.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="打开题目"><a href="#打开题目" class="headerlink" title="打开题目"></a>打开题目</h1><p>发现为一个图片，下面一串字符。<br><img src="https://pic.imgdb.cn/item/6205e10e2ab3f51d91205866.jpg"><br>猜测需要对下面字符解密即可。</p><h1 id="猪圈密码"><a href="#猪圈密码" class="headerlink" title="猪圈密码"></a>猪圈密码</h1><p>跟猪有关密码–猪圈密码。<br>猪圈密码对应表。</p><blockquote><p><img src="https://pic.imgdb.cn/item/6205e2652ab3f51d91215249.jpg"><br><img src="https://pic.imgdb.cn/item/6205e2922ab3f51d912175ac.jpg"><br>与原文一一对应,对应出来是大写字母。<br>WHEN THE PIG WANT TO EAT<br>提交发现不正确，修改为小写字母，删除空格。</p></blockquote><h1 id="猪猪侠变变变"><a href="#猪猪侠变变变" class="headerlink" title="猪猪侠变变变"></a>猪猪侠变变变</h1><p>添加几种猪圈密码变种。<br><img src="https://pic.imgdb.cn/item/6205e5dd2ab3f51d91245480.jpg"></p><h2 id="变种一"><a href="#变种一" class="headerlink" title="变种一"></a>变种一</h2><p>解析图：<br><img src="https://pic.imgdb.cn/item/6205e5fb2ab3f51d91246d91.jpg"><br>这是同样利用格子，但只在一个“井”格中将26字母全部填入，再通过圆点在格子中的上中下位置加以区分，得到密码表如下（自制）：<br><img src="https://pic.imgdb.cn/item/6205e6152ab3f51d9124842a.jpg"></p><h2 id="变种二"><a href="#变种二" class="headerlink" title="变种二"></a>变种二</h2><p>感觉这个是真牛~~<br>解析图：<br><img src="https://pic.imgdb.cn/item/6205e6c72ab3f51d91251f03.jpg"><br>对应表:<br><img src="https://pic.imgdb.cn/item/6205e71b2ab3f51d91256a05.jpg"></p><h2 id="变种三"><a href="#变种三" class="headerlink" title="变种三"></a>变种三</h2><p>解析图：<br><img src="https://pic.imgdb.cn/item/6205e79c2ab3f51d9125dd7e.jpg"></p>]]></content>
     
     
     <categories>
@@ -298,19 +448,6 @@
       <tag>CTF</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/posts/16107.html"/>
-    <url>/posts/16107.html</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
     
   </entry>
   

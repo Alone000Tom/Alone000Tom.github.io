@@ -18,7 +18,7 @@
   <meta name="author" content="Alone">
   <meta name="keywords" content="">
   
-  <title>Alone 的博客</title>
+  <title>nosecurity</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -142,7 +142,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/shouye1.png') no-repeat center center;
+         style="background: url('/img/panor.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -182,23 +182,265 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/37809.html" target="_self">
-          ctfhub-内网访问
+        <a href="/posts/64920.html" target="_self">
+          RCE-远程包含
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/37809.html" target="_self">
+        <a href="/posts/64920.html" target="_self">
           
           
             
           
           打开题目
 
-强调访问127.0.0.1/flag.php打开环境地址为http://challenge-e7aed46229f00f03.sandbox.ctfhub.com:10800/?url=_末尾存在url=猜测可能加上url=127.0.0.1/flag.php(去掉第一个_)
+查看内容
 
-得到flag
+“我没有shell，你怎么取flag？”打开便是一个phpinfo()
 
+
+尝试file
+用file包含phpinfo是有回显的?/file=php://input
+
+
+
+所以构造payload ：?file=php://input查看当前目录结果如下：
+
+
+
+
+
+
+查看上级目录
+
+
+
+
+
+
+查看flag内容
+
+
+
+
+
+
+
+直接搜索、查看
+
+?file=php://inpu
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-01-20 19:01" pubdate>
+              2022-01-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CTFHUB/">CTFHUB</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/51901.html" target="_self">
+          极客大挑战 2019Havefun
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/51901.html" target="_self">
+          
+          
+            
+          
+          
+
+打开环境页面有一只猫，尾巴会动，啥也没有。f12查看网页。发现提醒，传入参数cat如果cat值为dog则显示一些东西。传参数发现直接得到结果
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-12-03 23:01" pubdate>
+              2021-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/BUU/">BUU</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/34796.html" target="_self">
+          HCTF 2018WarmUp
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/34796.html" target="_self">
+          
+          
+            
+          
+          查看源码，发现source.php访问。得到代码如下
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778 &lt;?php    highlight_fil
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-12-03 13:01" pubdate>
+              2021-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/BUU/">BUU</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/56485.html" target="_self">
+          MD5加密漏洞
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/56485.html" target="_self">
+          
+          
+            
+          
+          MD5是一种散列函数,是哈希算法的一种,可以将任意长度的输入,通过散列算法变换成128位的散列值
+MD5加密有4种绕过方式
+0e绕过数组绕过MD5碰撞MD5SQL注入
+
+0e绕过0e开头的字符串在参与比较时,会被当做科学计数法,结果转换为0 比如将两个md5值进行弱类型比较md5(‘QNKCDZO’) == md5(240610708)MD5加密后会变成这个样子
+0e830400451993494
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-11-07 13:01" pubdate>
+              2021-11-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/63564.html" target="_self">
+          ctfhub-URL伪协议
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/63564.html" target="_self">
+          
+          
+            
+          
+          URL伪协议：file://  本地文件传输协议，File协议主要用于访问本地计算机中的文件，就如同在Windows资源管理器中打开文件一样dict://  Dict协议,字典服务器器协议,dict是基于查询响应的TCP协议,它的目标是超越Webster protocol，并允许客户端在使用过程中访问更多字典。Dict服务器和客户机使用TCP端口2628gopher://  Gopher协议是互联
         </a>
       </p>
 
@@ -231,233 +473,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/618.html" target="_self">
-          攻防世界-NaNNaNNaNNaN-Batman
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/618.html" target="_self">
-          
-          
-            
-          
-          下载附件
-
-直接打开一段乱码，改为html尾，打开出现一个输入框。搜索发现说改为aert，弹出框框发现代码内容‘’’function $(){vare=document.getElementByld(“ c”).value;if(e.length==16)if(e.match(/^be0f23/)!=null)if(e.match(/233ac/)!=null)if(e.match(/e98aa$
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-11-07 13:01" pubdate>
-              2021-11-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/19937.html" target="_self">
-          攻防世界-NewsCenter
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/19937.html" target="_self">
-          
-          
-            
-          
-          环境http://111.200.241.244:62361
-
-打开发现为一搜索框，输入1,2,3没反应，了解到可能为xss或者sql注入。
-
-测试
-测试发现’闭合，输入-1’ union select 1,2,3#回显2,3.
-
-
-
-
-测试
-利用2,3回显点直接注入。database()先得到数据库名称。
-
-得到表名。得到列名得到列内内容
-
-
-sqlmap
-抓包获取请求包，保存为1.txt文件直
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-11-07 13:01" pubdate>
-              2021-11-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/40296.html" target="_self">
-          攻防世界-unserialize3
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/40296.html" target="_self">
-          
-          
-            
-          
-          一.根据题目猜测这道题应该和反序列化漏洞有关1.先了解一下什么是序列化和反序列化当在php中创建了一个对象后，可以通过 serialize() 函数把这个对象转变成一个字符串，保存对象的值方便之后的传递与使用。与 serialize() 相反的就是反序列化函数 unserialize() ，它可以将一个字符串转变为相对应的php对象。
-
-在序列化过程中会用到的函数：    __construct(
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-11-07 13:01" pubdate>
-              2021-11-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/">攻防世界</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF/">CTF</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/14597.html" target="_self">
-          uplads1
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/14597.html" target="_self">
-          
-          
-            
-          
-          上传一个php文件显示只能上传jpg.png.gif文件，打开代理，在抓包之前就显示上传限制，初步确定为前端检测过滤，右键查看源码，发现存在javascript代码起到过滤作用。
-1234567891011121314151617181920&lt;script type=&quot;text/javascript&quot;&gt;    function checkFile() &#123; 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-06 13:01" pubdate>
-              2021-10-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/uplads/">uplads</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">文件上传</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#board">9</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -600,7 +620,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">10.3k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12k</span>
 </div>
 </div>
 
