@@ -79,31 +79,6 @@
   
   
   <entry>
-    <title>正则表达式大全</title>
-    <link href="/posts/51373.html"/>
-    <url>/posts/51373.html</url>
-    
-    <content type="html"><![CDATA[<center> 正则表达式大大大大大全</center>TIPS ONE：可以使用 Ctrl-F 快捷键搜索关键字TIPS TWO：下面所列的正则表达式均自己测试过，但并非终极严谨……如果你有更好的替代方案，欢迎提出哦^_^<h1 id="邮箱-邮件地址（Email）"><a href="#邮箱-邮件地址（Email）" class="headerlink" title="邮箱/邮件地址（Email）"></a>邮箱/邮件地址（Email）</h1><p><code>\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]&#123;2,14&#125;</code></p><h1 id="手机（国内）"><a href="#手机（国内）" class="headerlink" title="手机（国内）"></a>手机（国内）</h1><p><code>0?(13|14|15|17|18|19)[0-9]&#123;9&#125;</code></p><h1 id="电话（国内）"><a href="#电话（国内）" class="headerlink" title="电话（国内）"></a>电话（国内）</h1><p><code>(\(\d&#123;3,4&#125;\)|\d&#123;3,4&#125;-|\s)?\d&#123;8&#125; </code></p><h1 id="网址（URL）"><a href="#网址（URL）" class="headerlink" title="网址（URL）"></a>网址（URL）</h1><p><code>^((https|http)?:\/\/)[^\s]+</code></p><h1 id="邮政编码"><a href="#邮政编码" class="headerlink" title="邮政编码"></a>邮政编码</h1><p><code> ^[1-9]\d&#123;5&#125;$</code></p><h1 id="身份证号码（18-位）"><a href="#身份证号码（18-位）" class="headerlink" title="身份证号码（18 位）"></a>身份证号码（18 位）</h1><p><code>^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d&#123;3&#125;)([0-9]|X)$</code></p><h1 id="QQ-号码"><a href="#QQ-号码" class="headerlink" title="QQ 号码"></a>QQ 号码</h1><p><code>[1-9][0-9]&#123;4,&#125;</code></p><h1 id="IP-地址（IPv4）"><a href="#IP-地址（IPv4）" class="headerlink" title="IP 地址（IPv4）"></a>IP 地址（IPv4）</h1><p><code>(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d) </code></p><h1 id="日期（yyyy-mm-dd）"><a href="#日期（yyyy-mm-dd）" class="headerlink" title="日期（yyyy-mm-dd）"></a>日期（yyyy-mm-dd）</h1><p><code>([0-9]&#123;3&#125;[1-9]|[0-9]&#123;2&#125;[1-9][0-9]&#123;1&#125;|[0-9]&#123;1&#125;[1-9][0-9]&#123;2&#125;|[1-9][0-9]&#123;3&#125;)-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))</code></p><h1 id="时间（hh-mm-ss）"><a href="#时间（hh-mm-ss）" class="headerlink" title="时间（hh:mm:ss）"></a>时间（hh:mm:ss）</h1><p><code>([01]?\d|2[0-3]):[0-5]?\d:[0-5]?\d</code></p><h1 id="空白行"><a href="#空白行" class="headerlink" title="空白行"></a>空白行</h1><p><code>\n\s*\r </code></p><h1 id="中文字符"><a href="#中文字符" class="headerlink" title="中文字符"></a>中文字符</h1><p><code>[\u4e00-\u9fa5]</code></p><h1 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h1><p><code>^-?[1-9]\d*$ </code></p><h1 id="正整数"><a href="#正整数" class="headerlink" title="正整数"></a>正整数</h1><p><code>^[1-9]\d*$</code></p><h1 id="非负整数（0-和正整数）"><a href="#非负整数（0-和正整数）" class="headerlink" title="非负整数（0 和正整数）"></a>非负整数（0 和正整数）</h1><p><code>^(0|[1-9][0-9]*)$</code></p><h1 id="负整数"><a href="#负整数" class="headerlink" title="负整数"></a>负整数</h1><p><code>^-[1-9]\d*$</code></p><h1 id="非正整数（0-和负整数）"><a href="#非正整数（0-和负整数）" class="headerlink" title="非正整数（0 和负整数）"></a>非正整数（0 和负整数）</h1><p><code>^-[1-9]\d|0$</code></p><h1 id="十进制整数"><a href="#十进制整数" class="headerlink" title="十进制整数"></a>十进制整数</h1><p><code>^[0-9]*$</code></p><h1 id="n-位的整数"><a href="#n-位的整数" class="headerlink" title="n 位的整数"></a>n 位的整数</h1><p><code>^\d&#123;n&#125;$</code></p><h1 id="至少-n-位的整数"><a href="#至少-n-位的整数" class="headerlink" title="至少 n 位的整数"></a>至少 n 位的整数</h1><p><code>^\d&#123;n,&#125;$</code></p><h1 id="m-n位的整数"><a href="#m-n位的整数" class="headerlink" title="m~n位的整数"></a>m~n位的整数</h1><p><code>^\d&#123;m,n&#125;$</code></p><h1 id="正浮点数"><a href="#正浮点数" class="headerlink" title="正浮点数"></a>正浮点数</h1><p><code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$</code></p><h1 id="负浮点数"><a href="#负浮点数" class="headerlink" title="负浮点数"></a>负浮点数</h1><p><code>^-[1-9]\d*\.\d*|-0\.\d*[1-9]\d*$</code></p><h1 id="包含两位小数的实数"><a href="#包含两位小数的实数" class="headerlink" title="包含两位小数的实数"></a>包含两位小数的实数</h1><p><code>^-?[0-9]+(.[0-9]&#123;2&#125;)?$</code></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>其他</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>其他</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>文件读取空格绕过</title>
     <link href="/posts/4923.html"/>
     <url>/posts/4923.html</url>
@@ -121,6 +96,31 @@
     <tags>
       
       <tag>CTF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>正则表达式大全</title>
+    <link href="/posts/51373.html"/>
+    <url>/posts/51373.html</url>
+    
+    <content type="html"><![CDATA[<center> 正则表达式大大大大大全</center>TIPS ONE：可以使用 Ctrl-F 快捷键搜索关键字TIPS TWO：下面所列的正则表达式均自己测试过，但并非终极严谨……如果你有更好的替代方案，欢迎提出哦^_^<h1 id="邮箱-邮件地址（Email）"><a href="#邮箱-邮件地址（Email）" class="headerlink" title="邮箱/邮件地址（Email）"></a>邮箱/邮件地址（Email）</h1><p><code>\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]&#123;2,14&#125;</code></p><h1 id="手机（国内）"><a href="#手机（国内）" class="headerlink" title="手机（国内）"></a>手机（国内）</h1><p><code>0?(13|14|15|17|18|19)[0-9]&#123;9&#125;</code></p><h1 id="电话（国内）"><a href="#电话（国内）" class="headerlink" title="电话（国内）"></a>电话（国内）</h1><p><code>(\(\d&#123;3,4&#125;\)|\d&#123;3,4&#125;-|\s)?\d&#123;8&#125; </code></p><h1 id="网址（URL）"><a href="#网址（URL）" class="headerlink" title="网址（URL）"></a>网址（URL）</h1><p><code>^((https|http)?:\/\/)[^\s]+</code></p><h1 id="邮政编码"><a href="#邮政编码" class="headerlink" title="邮政编码"></a>邮政编码</h1><p><code> ^[1-9]\d&#123;5&#125;$</code></p><h1 id="身份证号码（18-位）"><a href="#身份证号码（18-位）" class="headerlink" title="身份证号码（18 位）"></a>身份证号码（18 位）</h1><p><code>^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d&#123;3&#125;)([0-9]|X)$</code></p><h1 id="QQ-号码"><a href="#QQ-号码" class="headerlink" title="QQ 号码"></a>QQ 号码</h1><p><code>[1-9][0-9]&#123;4,&#125;</code></p><h1 id="IP-地址（IPv4）"><a href="#IP-地址（IPv4）" class="headerlink" title="IP 地址（IPv4）"></a>IP 地址（IPv4）</h1><p><code>(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d&#123;2&#125;|[1-9]?\d) </code></p><h1 id="日期（yyyy-mm-dd）"><a href="#日期（yyyy-mm-dd）" class="headerlink" title="日期（yyyy-mm-dd）"></a>日期（yyyy-mm-dd）</h1><p><code>([0-9]&#123;3&#125;[1-9]|[0-9]&#123;2&#125;[1-9][0-9]&#123;1&#125;|[0-9]&#123;1&#125;[1-9][0-9]&#123;2&#125;|[1-9][0-9]&#123;3&#125;)-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))</code></p><h1 id="时间（hh-mm-ss）"><a href="#时间（hh-mm-ss）" class="headerlink" title="时间（hh:mm:ss）"></a>时间（hh:mm:ss）</h1><p><code>([01]?\d|2[0-3]):[0-5]?\d:[0-5]?\d</code></p><h1 id="空白行"><a href="#空白行" class="headerlink" title="空白行"></a>空白行</h1><p><code>\n\s*\r </code></p><h1 id="中文字符"><a href="#中文字符" class="headerlink" title="中文字符"></a>中文字符</h1><p><code>[\u4e00-\u9fa5]</code></p><h1 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h1><p><code>^-?[1-9]\d*$ </code></p><h1 id="正整数"><a href="#正整数" class="headerlink" title="正整数"></a>正整数</h1><p><code>^[1-9]\d*$</code></p><h1 id="非负整数（0-和正整数）"><a href="#非负整数（0-和正整数）" class="headerlink" title="非负整数（0 和正整数）"></a>非负整数（0 和正整数）</h1><p><code>^(0|[1-9][0-9]*)$</code></p><h1 id="负整数"><a href="#负整数" class="headerlink" title="负整数"></a>负整数</h1><p><code>^-[1-9]\d*$</code></p><h1 id="非正整数（0-和负整数）"><a href="#非正整数（0-和负整数）" class="headerlink" title="非正整数（0 和负整数）"></a>非正整数（0 和负整数）</h1><p><code>^-[1-9]\d|0$</code></p><h1 id="十进制整数"><a href="#十进制整数" class="headerlink" title="十进制整数"></a>十进制整数</h1><p><code>^[0-9]*$</code></p><h1 id="n-位的整数"><a href="#n-位的整数" class="headerlink" title="n 位的整数"></a>n 位的整数</h1><p><code>^\d&#123;n&#125;$</code></p><h1 id="至少-n-位的整数"><a href="#至少-n-位的整数" class="headerlink" title="至少 n 位的整数"></a>至少 n 位的整数</h1><p><code>^\d&#123;n,&#125;$</code></p><h1 id="m-n位的整数"><a href="#m-n位的整数" class="headerlink" title="m~n位的整数"></a>m~n位的整数</h1><p><code>^\d&#123;m,n&#125;$</code></p><h1 id="正浮点数"><a href="#正浮点数" class="headerlink" title="正浮点数"></a>正浮点数</h1><p><code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$</code></p><h1 id="负浮点数"><a href="#负浮点数" class="headerlink" title="负浮点数"></a>负浮点数</h1><p><code>^-[1-9]\d*\.\d*|-0\.\d*[1-9]\d*$</code></p><h1 id="包含两位小数的实数"><a href="#包含两位小数的实数" class="headerlink" title="包含两位小数的实数"></a>包含两位小数的实数</h1><p><code>^-?[0-9]+(.[0-9]&#123;2&#125;)?$</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -204,11 +204,11 @@
   
   
   <entry>
-    <title>信息化时代的步伐</title>
-    <link href="/posts/14699.html"/>
-    <url>/posts/14699.html</url>
+    <title>变异凯撒</title>
+    <link href="/posts/2881.html"/>
+    <url>/posts/2881.html</url>
     
-    <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.imgdb.cn/item/620277312ab3f51d9145f95d.jpg"><br>606046152623600817831216121621196386<br>一串字码啥说明也没有很懵逼啊。</p><h1 id="搜啊"><a href="#搜啊" class="headerlink" title="搜啊"></a>搜啊</h1><p>看wp发现是中文电码。<br>中文电码，又称标准中文电码、中文商用电码、中文电报码或中文电报明码，原本是于电报之中传送中文信息的方法。它是第一个把汉字化作电子讯号的编码表。<br>中国人最早研制的电报机华侨商人王承荣从法国回国后，与福州的王斌研制出我国第一台电报机，并呈请政府自办电报。清政府拒不采纳。<br>这算跟题目扯上关系了。</p><hr><p><a href="http://code.mcdvisa.com/">中文电码查询网站</a></p><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/6202785b2ab3f51d91475d69.jpg"></p><p><strong>整活，不赖！</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。<br>加密密文：afZ_r9VYfScOeO_UL^RWUc<br>格式：flag{ }<br>做以下尝试<br>    afZ_ -&gt; flag<br>    rc -&gt; {}</p><hr><p>其中ASCII码值的变化为</p><table><thead><tr><th align="left"></th><th align="left"></th><th align="left"><strong>差值</strong></th></tr></thead><tbody><tr><td align="left">a</td><td align="left">f</td><td align="left">5</td></tr><tr><td align="left">f</td><td align="left">l</td><td align="left">6</td></tr><tr><td align="left">Z</td><td align="left">a</td><td align="left">7</td></tr><tr><td align="left">_</td><td align="left">g</td><td align="left">8</td></tr></tbody></table><p>所以解密方法已经很明显了~</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">c</span> = <span class="hljs-string">&quot;afZ_r9VYfScOeO_UL^RWUc&quot;</span><br><span class="hljs-variable">move</span> = <span class="hljs-number">5</span><br><span class="hljs-variable">flag</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-variable">for</span> <span class="hljs-variable">i</span> <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-variable">c</span>:<br>    <span class="hljs-variable">flag</span> += <span class="hljs-function"><span class="hljs-title">chr</span>(<span class="hljs-title"><span class="hljs-built_in">ord</span></span>(<span class="hljs-variable">i</span>) + <span class="hljs-variable">move</span>)</span><br>    <span class="hljs-variable">move</span> += <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">flag</span>)</span><br><br></code></pre></td></tr></table></figure><p>结果为flag{Caesar_variation}</p>]]></content>
     
     
     <categories>
@@ -229,11 +229,11 @@
   
   
   <entry>
-    <title>变异凯撒</title>
-    <link href="/posts/2881.html"/>
-    <url>/posts/2881.html</url>
+    <title>信息化时代的步伐</title>
+    <link href="/posts/14699.html"/>
+    <url>/posts/14699.html</url>
     
-    <content type="html"><![CDATA[<p>常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。<br>加密密文：afZ_r9VYfScOeO_UL^RWUc<br>格式：flag{ }<br>做以下尝试<br>    afZ_ -&gt; flag<br>    rc -&gt; {}</p><hr><p>其中ASCII码值的变化为</p><table><thead><tr><th align="left"></th><th align="left"></th><th align="left"><strong>差值</strong></th></tr></thead><tbody><tr><td align="left">a</td><td align="left">f</td><td align="left">5</td></tr><tr><td align="left">f</td><td align="left">l</td><td align="left">6</td></tr><tr><td align="left">Z</td><td align="left">a</td><td align="left">7</td></tr><tr><td align="left">_</td><td align="left">g</td><td align="left">8</td></tr></tbody></table><p>所以解密方法已经很明显了~</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">c</span> = <span class="hljs-string">&quot;afZ_r9VYfScOeO_UL^RWUc&quot;</span><br><span class="hljs-variable">move</span> = <span class="hljs-number">5</span><br><span class="hljs-variable">flag</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-variable">for</span> <span class="hljs-variable">i</span> <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-variable">c</span>:<br>    <span class="hljs-variable">flag</span> += <span class="hljs-function"><span class="hljs-title">chr</span>(<span class="hljs-title"><span class="hljs-built_in">ord</span></span>(<span class="hljs-variable">i</span>) + <span class="hljs-variable">move</span>)</span><br>    <span class="hljs-variable">move</span> += <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">flag</span>)</span><br><br></code></pre></td></tr></table></figure><p>结果为flag{Caesar_variation}</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.imgdb.cn/item/620277312ab3f51d9145f95d.jpg"><br>606046152623600817831216121621196386<br>一串字码啥说明也没有很懵逼啊。</p><h1 id="搜啊"><a href="#搜啊" class="headerlink" title="搜啊"></a>搜啊</h1><p>看wp发现是中文电码。<br>中文电码，又称标准中文电码、中文商用电码、中文电报码或中文电报明码，原本是于电报之中传送中文信息的方法。它是第一个把汉字化作电子讯号的编码表。<br>中国人最早研制的电报机华侨商人王承荣从法国回国后，与福州的王斌研制出我国第一台电报机，并呈请政府自办电报。清政府拒不采纳。<br>这算跟题目扯上关系了。</p><hr><p><a href="http://code.mcdvisa.com/">中文电码查询网站</a></p><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/6202785b2ab3f51d91475d69.jpg"></p><p><strong>整活，不赖！</strong></p>]]></content>
     
     
     <categories>
@@ -529,11 +529,11 @@
   
   
   <entry>
-    <title>攻防世界-NaNNaNNaNNaN-Batman</title>
-    <link href="/posts/618.html"/>
-    <url>/posts/618.html</url>
+    <title>攻防世界-NewsCenter</title>
+    <link href="/posts/19937.html"/>
+    <url>/posts/19937.html</url>
     
-    <content type="html"><![CDATA[<h1 id="下载附件"><a href="#下载附件" class="headerlink" title="下载附件"></a>下载附件</h1><p><img src="https://i.loli.net/2021/11/06/1YNGlEPAmjToR7C.png" alt="(◕ᴗ◕✿)"></p><blockquote><p>直接打开一段乱码，改为html尾，打开出现一个输入框。<br>搜索发现说改为aert，弹出框框<br><img src="https://i.loli.net/2021/11/06/pyskLhMBuYxTQC9.png" alt="(◕ᴗ◕✿)"><br>发现代码内容<br>‘’’<br>function $(){var<br>e=document.getElementByld(“ c”).value;if(e.length==16)if(e.match(/^be0f23/)!=null)if(e.match(/233ac/)!=null)if(e.match(/e98aa$/)!=null)if(e.match(/c7be9/)!=null){var t=[“fl” ,”s_a” ,”i” ,”e}” ];varn=[“a”,”_hOl”,”n”];var r=[“g{“ ,”e”,”<em>O”];var i=[“it’”,”</em>“, “n”];vars=[t,n,r,i];for(var o=0;o&lt;13;++o){document.write(s[o%4]<br>[0]);s[o%4].splice(0,1)l}document.write(‘ einput id=”c” &gt; &lt;buttononclick=$()&gt; Ok </button >‘);delete </p></blockquote><p>‘’’</p><blockquote><p>发现匹配字符串<br>be0f23  233ac  c7be9   e98aa<br>和成为：be0f233ac7be98aa</p></blockquote><p>将字符串输入到输入框中得到flag<br>flag{it’s_a_h0le_in_0ne}</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p><a href="http://111.200.241.244:62361/">http://111.200.241.244:62361</a></p><blockquote><p>打开发现为一搜索框，输入1,2,3没反应，了解到可能为xss或者sql注入。</p></blockquote><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><blockquote><p>测试发现’闭合，输入-1’ union select 1,2,3#回显2,3.</p><blockquote><p><img src="https://i.loli.net/2021/11/05/HiqB87ynfAwjESJ.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h1><blockquote><p>利用2,3回显点直接注入。database()先得到数据库名称。</p><blockquote><p><img src="https://i.loli.net/2021/11/05/YM1UBPsVkXm2OFD.png" alt="＜(▰˘◡˘▰)"><br>得到表名。<br><img src="https://i.loli.net/2021/11/05/mM3aR5u2qfkB4WF.png" alt="＜(▰˘◡˘▰)"><br>得到列名<br><img src="https://i.loli.net/2021/11/05/DdmFiQ8LEMrbRCu.png" alt="＜(▰˘◡˘▰)"><br>得到列内内容<br><img src="https://i.loli.net/2021/11/05/hAsygvYONe2G4pZ.png" alt="(◕ᴗ◕✿)"></p></blockquote></blockquote><h1 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h1><blockquote><p>抓包获取请求包，保存为1.txt文件<br>直接查看news中的内容。<br>py sqlmap.py -r 1.txt -D news -dump</p><blockquote><p><img src="https://i.loli.net/2021/11/06/rBUk6j8NDbuXKdO.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1>]]></content>
     
     
     <categories>
@@ -554,11 +554,11 @@
   
   
   <entry>
-    <title>攻防世界-NewsCenter</title>
-    <link href="/posts/19937.html"/>
-    <url>/posts/19937.html</url>
+    <title>攻防世界-NaNNaNNaNNaN-Batman</title>
+    <link href="/posts/618.html"/>
+    <url>/posts/618.html</url>
     
-    <content type="html"><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p><a href="http://111.200.241.244:62361/">http://111.200.241.244:62361</a></p><blockquote><p>打开发现为一搜索框，输入1,2,3没反应，了解到可能为xss或者sql注入。</p></blockquote><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><blockquote><p>测试发现’闭合，输入-1’ union select 1,2,3#回显2,3.</p><blockquote><p><img src="https://i.loli.net/2021/11/05/HiqB87ynfAwjESJ.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h1><blockquote><p>利用2,3回显点直接注入。database()先得到数据库名称。</p><blockquote><p><img src="https://i.loli.net/2021/11/05/YM1UBPsVkXm2OFD.png" alt="＜(▰˘◡˘▰)"><br>得到表名。<br><img src="https://i.loli.net/2021/11/05/mM3aR5u2qfkB4WF.png" alt="＜(▰˘◡˘▰)"><br>得到列名<br><img src="https://i.loli.net/2021/11/05/DdmFiQ8LEMrbRCu.png" alt="＜(▰˘◡˘▰)"><br>得到列内内容<br><img src="https://i.loli.net/2021/11/05/hAsygvYONe2G4pZ.png" alt="(◕ᴗ◕✿)"></p></blockquote></blockquote><h1 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h1><blockquote><p>抓包获取请求包，保存为1.txt文件<br>直接查看news中的内容。<br>py sqlmap.py -r 1.txt -D news -dump</p><blockquote><p><img src="https://i.loli.net/2021/11/06/rBUk6j8NDbuXKdO.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="下载附件"><a href="#下载附件" class="headerlink" title="下载附件"></a>下载附件</h1><p><img src="https://i.loli.net/2021/11/06/1YNGlEPAmjToR7C.png" alt="(◕ᴗ◕✿)"></p><blockquote><p>直接打开一段乱码，改为html尾，打开出现一个输入框。<br>搜索发现说改为aert，弹出框框<br><img src="https://i.loli.net/2021/11/06/pyskLhMBuYxTQC9.png" alt="(◕ᴗ◕✿)"><br>发现代码内容<br>‘’’<br>function $(){var<br>e=document.getElementByld(“ c”).value;if(e.length==16)if(e.match(/^be0f23/)!=null)if(e.match(/233ac/)!=null)if(e.match(/e98aa$/)!=null)if(e.match(/c7be9/)!=null){var t=[“fl” ,”s_a” ,”i” ,”e}” ];varn=[“a”,”_hOl”,”n”];var r=[“g{“ ,”e”,”<em>O”];var i=[“it’”,”</em>“, “n”];vars=[t,n,r,i];for(var o=0;o&lt;13;++o){document.write(s[o%4]<br>[0]);s[o%4].splice(0,1)l}document.write(‘ einput id=”c” &gt; &lt;buttononclick=$()&gt; Ok </button >‘);delete </p></blockquote><p>‘’’</p><blockquote><p>发现匹配字符串<br>be0f23  233ac  c7be9   e98aa<br>和成为：be0f233ac7be98aa</p></blockquote><p>将字符串输入到输入框中得到flag<br>flag{it’s_a_h0le_in_0ne}</p>]]></content>
     
     
     <categories>
