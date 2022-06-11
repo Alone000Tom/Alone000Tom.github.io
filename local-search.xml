@@ -79,31 +79,6 @@
   
   
   <entry>
-    <title>文件读取空格绕过</title>
-    <link href="/posts/4923.html"/>
-    <url>/posts/4923.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="文件读取空格绕过"><a href="#文件读取空格绕过" class="headerlink" title="文件读取空格绕过"></a>文件读取空格绕过</h1><ul><li>${IFS}</li><li>$IFS$9</li><li>&lt;</li><li>&lt;&gt;</li><li>{,}</li></ul><h1 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">cat</span> flag.txt<br><span class="hljs-built_in">cat</span><span class="hljs-variable">$</span>&#123;IFS&#125;flag.txt<br><span class="hljs-built_in">cat</span><span class="hljs-variable">$IFS</span><span class="hljs-variable">$9flag</span>.txt<br><span class="hljs-built_in">cat</span>&lt;flag.txt<br><span class="hljs-built_in">cat</span>&lt;&gt;flag.txt<br>&#123;<span class="hljs-built_in">cat</span>,flag.txt&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>其他</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>CTF</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>正则表达式大全</title>
     <link href="/posts/51373.html"/>
     <url>/posts/51373.html</url>
@@ -121,6 +96,31 @@
     <tags>
       
       <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文件读取空格绕过</title>
+    <link href="/posts/4923.html"/>
+    <url>/posts/4923.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="文件读取空格绕过"><a href="#文件读取空格绕过" class="headerlink" title="文件读取空格绕过"></a>文件读取空格绕过</h1><ul><li>${IFS}</li><li>$IFS$9</li><li>&lt;</li><li>&lt;&gt;</li><li>{,}</li></ul><h1 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">cat</span> flag.txt<br><span class="hljs-built_in">cat</span><span class="hljs-variable">$</span>&#123;IFS&#125;flag.txt<br><span class="hljs-built_in">cat</span><span class="hljs-variable">$IFS</span><span class="hljs-variable">$9flag</span>.txt<br><span class="hljs-built_in">cat</span>&lt;flag.txt<br><span class="hljs-built_in">cat</span>&lt;&gt;flag.txt<br>&#123;<span class="hljs-built_in">cat</span>,flag.txt&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
       
     </tags>
     
@@ -204,11 +204,11 @@
   
   
   <entry>
-    <title>变异凯撒</title>
-    <link href="/posts/2881.html"/>
-    <url>/posts/2881.html</url>
+    <title>信息化时代的步伐</title>
+    <link href="/posts/14699.html"/>
+    <url>/posts/14699.html</url>
     
-    <content type="html"><![CDATA[<p>常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。<br>加密密文：afZ_r9VYfScOeO_UL^RWUc<br>格式：flag{ }<br>做以下尝试<br>    afZ_ -&gt; flag<br>    rc -&gt; {}</p><hr><p>其中ASCII码值的变化为</p><table><thead><tr><th align="left"></th><th align="left"></th><th align="left"><strong>差值</strong></th></tr></thead><tbody><tr><td align="left">a</td><td align="left">f</td><td align="left">5</td></tr><tr><td align="left">f</td><td align="left">l</td><td align="left">6</td></tr><tr><td align="left">Z</td><td align="left">a</td><td align="left">7</td></tr><tr><td align="left">_</td><td align="left">g</td><td align="left">8</td></tr></tbody></table><p>所以解密方法已经很明显了~</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">c</span> = <span class="hljs-string">&quot;afZ_r9VYfScOeO_UL^RWUc&quot;</span><br><span class="hljs-variable">move</span> = <span class="hljs-number">5</span><br><span class="hljs-variable">flag</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-variable">for</span> <span class="hljs-variable">i</span> <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-variable">c</span>:<br>    <span class="hljs-variable">flag</span> += <span class="hljs-function"><span class="hljs-title">chr</span>(<span class="hljs-title"><span class="hljs-built_in">ord</span></span>(<span class="hljs-variable">i</span>) + <span class="hljs-variable">move</span>)</span><br>    <span class="hljs-variable">move</span> += <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">flag</span>)</span><br><br></code></pre></td></tr></table></figure><p>结果为flag{Caesar_variation}</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.imgdb.cn/item/620277312ab3f51d9145f95d.jpg"><br>606046152623600817831216121621196386<br>一串字码啥说明也没有很懵逼啊。</p><h1 id="搜啊"><a href="#搜啊" class="headerlink" title="搜啊"></a>搜啊</h1><p>看wp发现是中文电码。<br>中文电码，又称标准中文电码、中文商用电码、中文电报码或中文电报明码，原本是于电报之中传送中文信息的方法。它是第一个把汉字化作电子讯号的编码表。<br>中国人最早研制的电报机华侨商人王承荣从法国回国后，与福州的王斌研制出我国第一台电报机，并呈请政府自办电报。清政府拒不采纳。<br>这算跟题目扯上关系了。</p><hr><p><a href="http://code.mcdvisa.com/">中文电码查询网站</a></p><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/6202785b2ab3f51d91475d69.jpg"></p><p><strong>整活，不赖！</strong></p>]]></content>
     
     
     <categories>
@@ -229,11 +229,11 @@
   
   
   <entry>
-    <title>信息化时代的步伐</title>
-    <link href="/posts/14699.html"/>
-    <url>/posts/14699.html</url>
+    <title>变异凯撒</title>
+    <link href="/posts/2881.html"/>
+    <url>/posts/2881.html</url>
     
-    <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.imgdb.cn/item/620277312ab3f51d9145f95d.jpg"><br>606046152623600817831216121621196386<br>一串字码啥说明也没有很懵逼啊。</p><h1 id="搜啊"><a href="#搜啊" class="headerlink" title="搜啊"></a>搜啊</h1><p>看wp发现是中文电码。<br>中文电码，又称标准中文电码、中文商用电码、中文电报码或中文电报明码，原本是于电报之中传送中文信息的方法。它是第一个把汉字化作电子讯号的编码表。<br>中国人最早研制的电报机华侨商人王承荣从法国回国后，与福州的王斌研制出我国第一台电报机，并呈请政府自办电报。清政府拒不采纳。<br>这算跟题目扯上关系了。</p><hr><p><a href="http://code.mcdvisa.com/">中文电码查询网站</a></p><h1 id="GET-flag"><a href="#GET-flag" class="headerlink" title="GET flag"></a>GET flag</h1><p><img src="https://pic.imgdb.cn/item/6202785b2ab3f51d91475d69.jpg"></p><p><strong>整活，不赖！</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。<br>加密密文：afZ_r9VYfScOeO_UL^RWUc<br>格式：flag{ }<br>做以下尝试<br>    afZ_ -&gt; flag<br>    rc -&gt; {}</p><hr><p>其中ASCII码值的变化为</p><table><thead><tr><th align="left"></th><th align="left"></th><th align="left"><strong>差值</strong></th></tr></thead><tbody><tr><td align="left">a</td><td align="left">f</td><td align="left">5</td></tr><tr><td align="left">f</td><td align="left">l</td><td align="left">6</td></tr><tr><td align="left">Z</td><td align="left">a</td><td align="left">7</td></tr><tr><td align="left">_</td><td align="left">g</td><td align="left">8</td></tr></tbody></table><p>所以解密方法已经很明显了~</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">c</span> = <span class="hljs-string">&quot;afZ_r9VYfScOeO_UL^RWUc&quot;</span><br><span class="hljs-variable">move</span> = <span class="hljs-number">5</span><br><span class="hljs-variable">flag</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-variable">for</span> <span class="hljs-variable">i</span> <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-variable">c</span>:<br>    <span class="hljs-variable">flag</span> += <span class="hljs-function"><span class="hljs-title">chr</span>(<span class="hljs-title"><span class="hljs-built_in">ord</span></span>(<span class="hljs-variable">i</span>) + <span class="hljs-variable">move</span>)</span><br>    <span class="hljs-variable">move</span> += <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">flag</span>)</span><br><br></code></pre></td></tr></table></figure><p>结果为flag{Caesar_variation}</p>]]></content>
     
     
     <categories>
@@ -479,31 +479,6 @@
   
   
   <entry>
-    <title>ctfhub-URL伪协议</title>
-    <link href="/posts/63564.html"/>
-    <url>/posts/63564.html</url>
-    
-    <content type="html"><![CDATA[<p>URL伪协议：<br>file://  本地文件传输协议，File协议主要用于访问本地计算机中的文件，就如同在Windows资源管理器中打开文件一样<br>dict://  Dict协议,字典服务器器协议,dict是基于查询响应的TCP协议,它的目标是超越Webster protocol，并允许客户端在使用过程中访问更多字典。Dict服务器和客户机使用TCP端口2628<br>gopher://  Gopher协议是互联网上使用的分布型的文件搜集获取网络协议。gopher协议是在HTTP协议出现之前,在internet上常见重用的协议,但是现在已经用的很少了<br>sftp://  Sftp代表SSH文件传输协议（SSH File Transfer Protocol），或安全文件传输协议（Secure File Transfer Protocol），这是一种与SSH打包在一起的单独协议，它运行在安全连接上，并以类似的方式进行工作<br>ldap://  LDAP代表轻量级目录访问协议。它是IP网络上的一种用于管理和访问分布式目录信息服务的应用程序协议<br>tftp://  TFTP（Trivial File Transfer Protocol,简单文件传输协议）是一种简单的基于lockstep机制的文件传输协议，它允许客户端从远程主机获取文件或将文件上传至远程主机。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ctfhub</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>CTF</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>ctfhub-内网访问</title>
     <link href="/posts/37809.html"/>
     <url>/posts/37809.html</url>
@@ -529,16 +504,16 @@
   
   
   <entry>
-    <title>攻防世界-NewsCenter</title>
-    <link href="/posts/19937.html"/>
-    <url>/posts/19937.html</url>
+    <title>ctfhub-URL伪协议</title>
+    <link href="/posts/63564.html"/>
+    <url>/posts/63564.html</url>
     
-    <content type="html"><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p><a href="http://111.200.241.244:62361/">http://111.200.241.244:62361</a></p><blockquote><p>打开发现为一搜索框，输入1,2,3没反应，了解到可能为xss或者sql注入。</p></blockquote><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><blockquote><p>测试发现’闭合，输入-1’ union select 1,2,3#回显2,3.</p><blockquote><p><img src="https://i.loli.net/2021/11/05/HiqB87ynfAwjESJ.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h1><blockquote><p>利用2,3回显点直接注入。database()先得到数据库名称。</p><blockquote><p><img src="https://i.loli.net/2021/11/05/YM1UBPsVkXm2OFD.png" alt="＜(▰˘◡˘▰)"><br>得到表名。<br><img src="https://i.loli.net/2021/11/05/mM3aR5u2qfkB4WF.png" alt="＜(▰˘◡˘▰)"><br>得到列名<br><img src="https://i.loli.net/2021/11/05/DdmFiQ8LEMrbRCu.png" alt="＜(▰˘◡˘▰)"><br>得到列内内容<br><img src="https://i.loli.net/2021/11/05/hAsygvYONe2G4pZ.png" alt="(◕ᴗ◕✿)"></p></blockquote></blockquote><h1 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h1><blockquote><p>抓包获取请求包，保存为1.txt文件<br>直接查看news中的内容。<br>py sqlmap.py -r 1.txt -D news -dump</p><blockquote><p><img src="https://i.loli.net/2021/11/06/rBUk6j8NDbuXKdO.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1>]]></content>
+    <content type="html"><![CDATA[<p>URL伪协议：<br>file://  本地文件传输协议，File协议主要用于访问本地计算机中的文件，就如同在Windows资源管理器中打开文件一样<br>dict://  Dict协议,字典服务器器协议,dict是基于查询响应的TCP协议,它的目标是超越Webster protocol，并允许客户端在使用过程中访问更多字典。Dict服务器和客户机使用TCP端口2628<br>gopher://  Gopher协议是互联网上使用的分布型的文件搜集获取网络协议。gopher协议是在HTTP协议出现之前,在internet上常见重用的协议,但是现在已经用的很少了<br>sftp://  Sftp代表SSH文件传输协议（SSH File Transfer Protocol），或安全文件传输协议（Secure File Transfer Protocol），这是一种与SSH打包在一起的单独协议，它运行在安全连接上，并以类似的方式进行工作<br>ldap://  LDAP代表轻量级目录访问协议。它是IP网络上的一种用于管理和访问分布式目录信息服务的应用程序协议<br>tftp://  TFTP（Trivial File Transfer Protocol,简单文件传输协议）是一种简单的基于lockstep机制的文件传输协议，它允许客户端从远程主机获取文件或将文件上传至远程主机。</p>]]></content>
     
     
     <categories>
       
-      <category>攻防世界</category>
+      <category>ctfhub</category>
       
     </categories>
     
@@ -559,6 +534,31 @@
     <url>/posts/618.html</url>
     
     <content type="html"><![CDATA[<h1 id="下载附件"><a href="#下载附件" class="headerlink" title="下载附件"></a>下载附件</h1><p><img src="https://i.loli.net/2021/11/06/1YNGlEPAmjToR7C.png" alt="(◕ᴗ◕✿)"></p><blockquote><p>直接打开一段乱码，改为html尾，打开出现一个输入框。<br>搜索发现说改为aert，弹出框框<br><img src="https://i.loli.net/2021/11/06/pyskLhMBuYxTQC9.png" alt="(◕ᴗ◕✿)"><br>发现代码内容<br>‘’’<br>function $(){var<br>e=document.getElementByld(“ c”).value;if(e.length==16)if(e.match(/^be0f23/)!=null)if(e.match(/233ac/)!=null)if(e.match(/e98aa$/)!=null)if(e.match(/c7be9/)!=null){var t=[“fl” ,”s_a” ,”i” ,”e}” ];varn=[“a”,”_hOl”,”n”];var r=[“g{“ ,”e”,”<em>O”];var i=[“it’”,”</em>“, “n”];vars=[t,n,r,i];for(var o=0;o&lt;13;++o){document.write(s[o%4]<br>[0]);s[o%4].splice(0,1)l}document.write(‘ einput id=”c” &gt; &lt;buttononclick=$()&gt; Ok </button >‘);delete </p></blockquote><p>‘’’</p><blockquote><p>发现匹配字符串<br>be0f23  233ac  c7be9   e98aa<br>和成为：be0f233ac7be98aa</p></blockquote><p>将字符串输入到输入框中得到flag<br>flag{it’s_a_h0le_in_0ne}</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>攻防世界</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>攻防世界-NewsCenter</title>
+    <link href="/posts/19937.html"/>
+    <url>/posts/19937.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p><a href="http://111.200.241.244:62361/">http://111.200.241.244:62361</a></p><blockquote><p>打开发现为一搜索框，输入1,2,3没反应，了解到可能为xss或者sql注入。</p></blockquote><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><blockquote><p>测试发现’闭合，输入-1’ union select 1,2,3#回显2,3.</p><blockquote><p><img src="https://i.loli.net/2021/11/05/HiqB87ynfAwjESJ.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h1><blockquote><p>利用2,3回显点直接注入。database()先得到数据库名称。</p><blockquote><p><img src="https://i.loli.net/2021/11/05/YM1UBPsVkXm2OFD.png" alt="＜(▰˘◡˘▰)"><br>得到表名。<br><img src="https://i.loli.net/2021/11/05/mM3aR5u2qfkB4WF.png" alt="＜(▰˘◡˘▰)"><br>得到列名<br><img src="https://i.loli.net/2021/11/05/DdmFiQ8LEMrbRCu.png" alt="＜(▰˘◡˘▰)"><br>得到列内内容<br><img src="https://i.loli.net/2021/11/05/hAsygvYONe2G4pZ.png" alt="(◕ᴗ◕✿)"></p></blockquote></blockquote><h1 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h1><blockquote><p>抓包获取请求包，保存为1.txt文件<br>直接查看news中的内容。<br>py sqlmap.py -r 1.txt -D news -dump</p><blockquote><p><img src="https://i.loli.net/2021/11/06/rBUk6j8NDbuXKdO.png" alt="＜(▰˘◡˘▰)"></p></blockquote></blockquote><h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1>]]></content>
     
     
     <categories>
