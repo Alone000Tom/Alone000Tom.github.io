@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
+  <link rel="icon" href="/img/logo.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#A9A9A9">
+  <meta name="description" content="No Security">
+  <meta name="author" content="Alone">
+  <meta name="keywords" content="">
+  
+  <title>markdown基本语法 - nosecurity</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.nosecurity.cn","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":150,"cursorChar":"ღ ","loop":true,"backspeed":200},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":" "},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading2.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Alone</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://nosecurity.cn/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                随笔
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                Weblinks
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/wendang2.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="markdown基本语法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Alone
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-06-03 18:46" pubdate>
+        June 3, 2022 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">markdown基本语法</h1>
+            
+            <div class="markdown-body">
+              <p>.md即markdown文件的基本常用编写语法,是一种快速标记、快速排版语言，现在很多前段项目中的说明文件readme等都是用.md文件编写的，而且很多企业也在在鼓励使用这种编辑方式，特别作为一个前端从业者更要学会使用这种语言。下面就简单和大家分享一些.md基本语法</p>
+<h1 id="一、基本符号：-gt"><a href="#一、基本符号：-gt" class="headerlink" title="一、基本符号：* - +. &gt;"></a>一、基本符号：* - +. &gt;</h1><p>基本上所有的markdown标记都是基于这四个符号或组合，需要注意的是，如果以基本符号开头的标记，注意基本符号后有一个用于分割标记符和内容的空格。</p>
+<h1 id="二、标题"><a href="#二、标题" class="headerlink" title="二、标题"></a>二、标题</h1><p>1.前面带#号，后面带文字，分别表示h1-h6,只到h6，而且h1下面会有一条横线</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs clean"># 一级标题<br>## 二级标题<br>### 三级标题<br>#### 四级标题<br>##### 五级标题<br>###### 六级标题<br></code></pre></td></tr></table></figure>
+<p>2.相当于标签闭合</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs clean"># 一级标题 #<br>## 二级标题 ##<br>### 三级标题 ###<br>#### 四级标题 ####<br>##### 五级标题 #####<br>###### 六级标题 #####<br></code></pre></td></tr></table></figure>
+<p>效果如下：<br><img src="https://pic.imgdb.cn/item/62e359c4f54cd3f937b36a3f.jpg" srcset="/img/loading2.gif" lazyload alt="标题.png"></p>
+<h1 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a>三、列表</h1><h4 id="1-无序列表"><a href="#1-无序列表" class="headerlink" title="1.无序列表"></a>1.无序列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs markdown">//形式一<br><span class="hljs-bullet">+</span> a<br><span class="hljs-bullet">+</span> b<br><span class="hljs-bullet">+</span> c<br>//形式二<br><span class="hljs-bullet">-</span> d<br><span class="hljs-bullet">-</span> e<br><span class="hljs-bullet">-</span> f<br>//形式三<br><span class="hljs-bullet">*</span> g<br><span class="hljs-bullet">*</span> h<br><span class="hljs-bullet">*</span> i<br></code></pre></td></tr></table></figure>
+<p>以上三种形式，效果其实都是一样的：<br><img src="https://pic.imgdb.cn/item/62e359eef54cd3f937b44c5f.png" srcset="/img/loading2.gif" lazyload alt="无序列表.png"></p>
+<h4 id="2-有序列表"><a href="#2-有序列表" class="headerlink" title="2.有序列表"></a>2.有序列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown">//正常形式<br><span class="hljs-bullet">1.</span> abc<br><span class="hljs-bullet">2.</span> bcd<br><span class="hljs-bullet">3.</span> cde<br>//错序效果<br><span class="hljs-bullet">2.</span> fgh<br><span class="hljs-bullet">3.</span> ghi<br><span class="hljs-bullet">5.</span> hij<br></code></pre></td></tr></table></figure>
+<p><strong>效果图</strong>：<br><img src="https://pic.imgdb.cn/item/62e35a08f54cd3f937b4ded1.png" srcset="/img/loading2.gif" lazyload alt="有序列表及错序效果图.png"></p>
+<blockquote>
+<p>如图，注意，数字后面的点只能是英文的点，有序列表的序号是根据第一行列表的数字顺序来的，<br>错序列表的序号本来是序号是乱的， 但是还是显示 2 3 5</p>
+</blockquote>
+<h4 id="3-嵌套列表"><a href="#3-嵌套列表" class="headerlink" title="3.嵌套列表"></a>3.嵌套列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs markdown">//无序列表嵌套<br><span class="hljs-bullet">+</span> 123<br><span class="hljs-bullet">    +</span> abc<br><span class="hljs-bullet">    +</span> bcd<br><span class="hljs-bullet">    +</span> cde<br><span class="hljs-bullet">+</span> 465<br><span class="hljs-bullet">+</span> 789<br>//有序列表嵌套<br><span class="hljs-bullet">1.</span> abcd<br><span class="hljs-bullet">    1.</span> abcde<br><span class="hljs-bullet">    2.</span> abcde<br><span class="hljs-bullet">    3.</span> abcde<br><span class="hljs-bullet">2.</span> bcde<br><span class="hljs-bullet">3.</span> cdef<br></code></pre></td></tr></table></figure>
+<p><strong>效果图</strong><br><img src="https://pic.imgdb.cn/item/62e35a1cf54cd3f937b54b03.png" srcset="/img/loading2.gif" lazyload alt="嵌套列表.png"></p>
+<blockquote>
+<p>列表可以嵌套，使用时在嵌套列表前按 tab 或 空格 来缩进,去控制列表的层数</p>
+</blockquote>
+<h1 id="四、引用说明区块"><a href="#四、引用说明区块" class="headerlink" title="四、引用说明区块"></a>四、引用说明区块</h1><p>对某个部分做的内容做一些说明或者引用某某的话等，可以用这个语法。</p>
+<h4 id="1-正常形式"><a href="#1-正常形式" class="headerlink" title="1.正常形式"></a>1.正常形式</h4><figure class="highlight node-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs node-repl"><span class="hljs-meta">&gt;</span> <span class="javascript">引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</span><br></code></pre></td></tr></table></figure>
+<p><strong>效果图</strong><br><img src="https://pic.imgdb.cn/item/62e35a5ff54cd3f937b6b8ed.png" srcset="/img/loading2.gif" lazyload alt="区块.png"></p>
+<h4 id="嵌套区块"><a href="#嵌套区块" class="headerlink" title="嵌套区块"></a>嵌套区块</h4><p>这里我只介绍一下我常用的方法，也是个人认为比较规范的一种方法，就是给区块的下一级区块多加一个右尖括号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">&gt;</span><span class="bash"> 一级引用</span><br><span class="hljs-meta">&gt;</span><span class="bash">&gt; 二级引用</span><br><span class="hljs-meta">&gt;</span><span class="bash">&gt;&gt; 三级引用</span><br><span class="hljs-meta">&gt;</span><span class="bash">&gt;&gt;&gt; 四级引用</span><br><span class="hljs-meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt; 五级引用</span><br><span class="hljs-meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt;&gt; 六级引用</span><br><br></code></pre></td></tr></table></figure>
+<p><strong>效果图：</strong><br><img src="https://pic.imgdb.cn/item/62e35a3af54cd3f937b5eef5.png" srcset="/img/loading2.gif" lazyload alt="嵌套区块.png"></p>
+<h1 id="五、代码块"><a href="#五、代码块" class="headerlink" title="五、代码块"></a>五、代码块</h1><p>在发布一些技术文章会涉及展示代码的问题，这时候代码块就显得尤为重要。</p>
+<h5 id="1-少量代码，单行使用，直接用-包裹起来就行了"><a href="#1-少量代码，单行使用，直接用-包裹起来就行了" class="headerlink" title="1.少量代码，单行使用，直接用`包裹起来就行了"></a>1.少量代码，单行使用，直接用`包裹起来就行了</h5><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-string">` shaoliangdaima,danhangshiyong `</span><br></code></pre></td></tr></table></figure>
+<p><strong>效果图：</strong><br><img src="https://pic.imgdb.cn/item/62e35b05f54cd3f937baa070.png" srcset="/img/loading2.gif" lazyload alt="单行代码块"></p>
+<h4 id="大量代码，需要多行使用，用-包裹起来"><a href="#大量代码，需要多行使用，用-包裹起来" class="headerlink" title="大量代码，需要多行使用，用```包裹起来"></a>大量代码，需要多行使用，用```包裹起来</h4><code>
+    <kbd>````</kbd>
+        daliangdaima,xuyaoduohangshiyong
+        daliangdaima,xuyaoduohangshiyong
+        daliangdaima,xuyaoduohangshiyong
+        daliangdaima,xuyaoduohangshiyong
+        daliangdaima,xuyaoduohangshiyong
+    <kbd>````</kbd>
+</code>
+![多行代码.png](https://pic.imgdb.cn/item/62e35b65f54cd3f937bcbc7e.png)
+# 六、链接
+#### 1.行内式
+链接的文字放在[]中，链接地址放在随后的()中，链接也可以带title属性，链接地址后面空一格，然后用引号引起来
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">[NoSecurity](https:<span class="hljs-regexp">//</span>nosecurity.cn <span class="hljs-string">&quot;There is no system is security.&quot;</span>),<br>是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。 <br><br></code></pre></td></tr></table></figure>
+#### 2.参数式
+链接的文字放在[]中，链接地址放在随后的:后，链接地址后面空一格，然后用引号引起来
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs vim">[my-logo.png]: http<span class="hljs-variable">s:</span>//nosecurity.<span class="hljs-keyword">cn</span> <span class="hljs-string">&quot;There is no system is security.&quot;</span><br>[my-logo.png]是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。<br>//参数定义的其他写法<br>[my-logo.png]: http<span class="hljs-variable">s:</span>//nosecurity.<span class="hljs-keyword">cn</span> <span class="hljs-string">&#x27;There is no system is security.&#x27;</span><br>[my-logo.png]: http<span class="hljs-variable">s:</span>//nosecurity.<span class="hljs-keyword">cn</span> (There <span class="hljs-keyword">is</span> <span class="hljs-keyword">no</span> <span class="hljs-built_in">system</span> <span class="hljs-keyword">is</span> security.)<br>[my-logo.png]: http<span class="hljs-variable">s:</span>//nosecurity.<span class="hljs-keyword">cn</span> <span class="hljs-string">&quot;There is no system is security.&quot;</span><br><br></code></pre></td></tr></table></figure>
+以上两种方式其效果图都是一样的，如下：
+![链接](https://pic.imgdb.cn/item/62e3648ff54cd3f937f2c7ee.png)
+
+
+<h1 id="七、图片"><a href="#七、图片" class="headerlink" title="七、图片"></a>七、图片</h1><h4 id="1-行内式"><a href="#1-行内式" class="headerlink" title="1.行内式"></a>1.行内式</h4><p>和链接的形式差不多，图片的名字放在[]中，图片地址放在随后的()中，title属性（图片地址后面空一格，然后用引号引起来）,注意的是[]前要加上!</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">![my-logo.png](https:<span class="hljs-regexp">//</span>nosecurity.cn<span class="hljs-regexp">/images/</span>logo.png)<br><br></code></pre></td></tr></table></figure>
+<h1 id="八、分割线"><a href="#八、分割线" class="headerlink" title="八、分割线"></a>八、分割线</h1><p>分割线可以由* - _（星号，减号，底线）这3个符号的至少3个符号表示，注意至少要3个，且不需要连续，有空格也可以</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">---</span><br><span class="hljs-bullet"></span><span class="hljs-section">- - -</span><br><span class="hljs-section">------</span><br><span class="hljs-bullet">***</span><br><span class="hljs-bullet"></span><span class="hljs-bullet">* </span>* *<br>******<br>___<br>_ _ _<br>______<br><br></code></pre></td></tr></table></figure>
+<p>以上代码的效果图均为：<br><img src="https://pic.imgdb.cn/item/62e3657df54cd3f937f87e71.png" srcset="/img/loading2.gif" lazyload alt="分割线.png"></p>
+<h1 id="九、其他"><a href="#九、其他" class="headerlink" title="九、其他"></a>九、其他</h1><h4 id="1-强调字体"><a href="#1-强调字体" class="headerlink" title="1.强调字体"></a>1.强调字体</h4><p>一个星号或者是一个下划线包起来，会转换为&lt;em&gt;倾斜，如果是2个，会转换为&lt;strong&gt;加粗</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-strong">*md*</span>    <br><span class="hljs-strong">**md**</span><br><span class="hljs-emphasis">_md_</span>   <br><span class="hljs-code"> __md__</span><br></code></pre></td></tr></table></figure>
+<p><strong>效果图：</strong><br><img src="https://pic.imgdb.cn/item/62e365f0f54cd3f937fb3d65.png" srcset="/img/loading2.gif" lazyload alt="强调字体.png"></p>
+<h4 id="2-转义"><a href="#2-转义" class="headerlink" title="2.转义"></a>2.转义</h4><p>基本上和js转义一样,\加需要转义的字符</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><span class="hljs-string">\\</span><br><span class="hljs-string">\*</span><br><span class="hljs-string">\+</span><br><span class="hljs-string">\-</span><br><span class="hljs-string">\`</span><br><span class="hljs-string">\_</span><br></code></pre></td></tr></table></figure>
+<h4 id="3-删除线"><a href="#3-删除线" class="headerlink" title="3.删除线"></a>3.删除线</h4><p>用~~把需要显示删除线的字符包裹起来</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haml">~~删除~~<br></code></pre></td></tr></table></figure>
+<p><strong>效果图：</strong><br><img src="https://pic.imgdb.cn/item/62e3665af54cd3f937fd9eac.png" srcset="/img/loading2.gif" lazyload alt="删除线.png"></p>
+<h1 id="十、表格"><a href="#十、表格" class="headerlink" title="十、表格"></a>十、表格</h1><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">//例子一<br>|<span class="hljs-string">123</span>|<span class="hljs-string">234</span>|<span class="hljs-string">345</span>|<br>|<span class="hljs-string">:-</span>|<span class="hljs-string">:-:</span>|<span class="hljs-string">-:</span>|<br>|<span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|<span class="hljs-string">cde</span>|<br>|<span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|<span class="hljs-string">cde</span>|<br>|<span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|<span class="hljs-string">cde</span>|<br>//例子二<br>|<span class="hljs-string">123</span>|<span class="hljs-string">234</span>|<span class="hljs-string">345</span>|<br>|<span class="hljs-string">:---</span>|<span class="hljs-string">:---:</span>|<span class="hljs-string">---:</span>|<br>|<span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|<span class="hljs-string">cde</span>|<br>|<span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|<span class="hljs-string">cde</span>|<br>|<span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|<span class="hljs-string">cde</span>|<br>//例子三<br>123|<span class="hljs-string">234</span>|345<br>:-|<span class="hljs-string">:-:</span>|<span class="hljs-string">-:</span><br><span class="hljs-string">abc</span>|<span class="hljs-string">bcd</span>|cde<br>abc|<span class="hljs-string">bcd</span>|cde<br>abc|<span class="hljs-string">bcd</span>|cde<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>上面三个例子的效果一样，由此可得：</p>
+<ol>
+<li>表格的格式不一定要对的非常起，但是为了良好的变成风格，尽量对齐是最好的</li>
+<li>分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中</li>
+</ol>
+</blockquote>
+<p>效果图如下：<br><img src="https://pic.imgdb.cn/item/62e366a8f54cd3f937ff66db.png" srcset="/img/loading2.gif" lazyload alt="表格"></p>
+<blockquote>
+<blockquote>
+<p>改篇文章借鉴于<a target="_blank" rel="noopener" href="https://www.jianshu.com/u/acd57061ac39">hunter97</a> ，跟大家一起分享了。</p>
+</blockquote>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/markdowm/">markdowm</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均为原创，采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/42267.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">英语作文模板</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/227.html">
+                        <span class="hidden-mobile">input的type属性大总结</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"WoVGaAhQ0hJHBK8PkWGFO1en-gzGzoHsz","appKey":"LbVJP8M6HLF1gPHFEnbYIbAg","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://wovgaahq.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <p>        ©2018-2022 </p> <p>  </p> 
+  </div>
+  
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        
+      </a>
+    </span>
+    
+      
+        <span class="beian-police">
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/yejiao32.png" srcset="/img/loading2.gif" lazyload alt="police-icon"/>
+          
+          <span class="beian-police">No Security ——Alone</span>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("06/01/2021 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "This website has been running for"+dnum+" d "; 
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s "; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+
+
+
+
+
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages">
+  <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub </span></a>
+</div>
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+  <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+</div>
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+  <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">aliyun</span></a>
+</div>
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供 CDN 加速服务">
+  <span class="badge-subject">CDN</span><span class="badge-value bg-orange">aliyun</span></a>
+</div>
+
+
+
+
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+  <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+</div>
+
+<div class="github-badge">
+  <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+  <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+</div>
+
+<div class="github-badge">
+  <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>人
+</div>
+
+<div class="github-badge">
+  <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>次
+</div>
+
+<div class="github-badge">
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">13.6k</span>
+</div>
+</div>
+
+<style>
+  .github-badge {
+      display:inline-block;
+      border-radius:4px;
+      text-shadow:none;
+      font-size:13px;
+      color:#fff;
+      line-height:15px;
+      background-color:#09ff2a;
+      margin-bottom:5px;
+  }
+  .github-badge .badge-subject {
+      display:inline-block;
+      background-color:#16b4f3;
+      padding:4px 4px 4px 6px;
+      border-top-left-radius:4px;
+      border-bottom-left-radius:4px;
+  }
+  .github-badge .badge-value {
+      display:inline-block;
+      padding:4px 6px 4px 4px;
+      border-top-right-radius:4px;
+      border-bottom-right-radius:4px;
+  }
+  .github-badge .bg-brightgreen {
+      background-color:#4DC820 !important;
+  }
+  .github-badge .bg-orange {
+      background-color:#FFA500 !important;
+  }
+  .github-badge .bg-yellow {
+      background-color:#D8B024 !important;
+  }
+  .github-badge .bg-blueviolet {
+      background-color:#8833D7 !important;
+  }
+  .github-badge .bg-pink {
+      background-color:#F26BAE !important;
+  }
+  .github-badge .bg-red {
+      background-color:#e05d44 !important;
+  }
+  .github-badge .bg-blue {
+      background-color:#007EC6 !important;
+  }
+  .github-badge .bg-lightgrey {
+      background-color:#9F9F9F !important;
+  }
+  .github-badge .bg-grey, .github-badge .bg-gray {
+      background-color:#555 !important;
+  }
+  .github-badge .bg-lightgrey, .github-badge .bg-lightgray {
+      background-color:#9f9f9f !important;
+  }
+</style>
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+
+<!--鼠标点击效果-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="154 255 154" opacity='0.6' zIndex="-2" count="170" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js" >
+</script>
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
