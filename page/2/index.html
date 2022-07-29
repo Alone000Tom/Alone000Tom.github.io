@@ -119,7 +119,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
-                Links
+                リンク
               </a>
             </li>
           
@@ -175,6 +175,65 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/4923.html" target="_self">
+          文件读取空格绕过
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/4923.html" target="_self">
+          
+          
+            
+          
+          文件读取空格绕过
+${IFS}
+$IFS$9
+&lt;
+&lt;&gt;
+{,}
+
+命令执行123456cat flag.txtcat$&#123;IFS&#125;flag.txtcat$IFS$9flag.txtcat&lt;flag.txtcat&lt;&gt;flag.txt&#123;cat,flag.txt&#125;
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-20 23:30" pubdate>
+              2022-02-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -384,89 +443,6 @@ Rabbit密文格式：U2FsdGVkX1/+ydnDPowGbjjJXhZxm2MP2AgI解密结果：Cute_Rab
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/2881.html" target="_self">
-          变异凯撒
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/2881.html" target="_self">
-          
-          
-            
-          
-          常规的凯撒密码是对每个字母做相同单位的移位。变异凯撒每个字母的移位可能各不相同。加密密文：afZ_r9VYfScOeO_UL^RWUc格式：flag{ }做以下尝试    afZ_ -&gt; flag    rc -&gt; {}
-
-其中ASCII码值的变化为
-
-
-
-
-
-差值
-
-
-
-a
-f
-5
-
-
-f
-l
-6
-
-
-Z
-a
-7
-
-
-_
-g
-8
-
-
-所以解密方法已经很明显了~
-12345678c =
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-01-27 23:30" pubdate>
-              2022-01-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/BUU/">BUU</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CTF-crypto/">CTF-crypto</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
@@ -496,7 +472,7 @@ g
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -505,7 +481,7 @@ g
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+                 for="local-search-input">キーワード</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -614,7 +590,7 @@ setInterval("createtime()",250);
 </div>
 
 <div class="github-badge">
-  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12k</span>
+  <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">12.1k</span>
 </div>
 </div>
 
